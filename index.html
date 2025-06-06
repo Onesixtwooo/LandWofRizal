@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life and Works of Rizal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 50%, #d4c4a0 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23d4af8c' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .decorative-border {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 8px solid rgba(146, 64, 14, 0.2);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid rgba(146, 64, 14, 0.3);
+            background: rgba(254, 252, 232, 0.9);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, #b45309, #92400e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d97706;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 0.25rem;
+        }
+
+        .logo-text p {
+            font-size: 0.875rem;
+            color: #b45309;
+            font-style: italic;
+        }
+
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid #fbbf24;
+            font-size: 0.875rem;
+            display: none;
+        }
+
+        @media (min-width: 640px) {
+            .badge {
+                display: flex;
+                align-items: center;
+                gap: 0.25rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 3rem 0 5rem;
+            position: relative;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            border: 4px solid rgba(146, 64, 14, 0.3);
+        }
+
+        .hero::before {
+            top: 2rem;
+            left: 2rem;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .hero::after {
+            top: 2rem;
+            right: 2rem;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .hero-badge {
+            background: #fef3c7;
+            color: #1e40af;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid #fbbf24;
+            font-size: 0.875rem;
+            width: fit-content;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #92400e;
+            line-height: 1.1;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3.75rem;
+            }
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #a16207;
+            line-height: 1.6;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .highlight-card {
+            background: rgba(254, 252, 232, 0.6);
+            backdrop-filter: blur(4px);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            border: 2px solid #fbbf24;
+        }
+
+        .highlight-label {
+            font-size: 0.875rem;
+            color: #a16207;
+            font-weight: 500;
+        }
+
+        .highlight-value {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #92400e;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #b45309;
+            color: #fef3c7;
+            border-color: #d97706;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            background: #92400e;
+        }
+
+        .btn-outline {
+            border: 2px solid #b45309;
+            color: #a16207;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #fef3c7;
+        }
+
+        /* Portrait Section */
+        .portrait-container {
+            position: relative;
+        }
+
+        .portrait-frame {
+            position: relative;
+            background: linear-gradient(135deg, #a16207, #92400e);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            border: 4px solid #d97706;
+        }
+
+      
+
+       
+
+        .portrait-img {
+            width: 100%;
+            max-width: 300px;
+            height: 400px;
+            background: #fef3c7;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #fbbf24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #92400e;
+            font-size: 1.125rem;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .portrait-date {
+            position: absolute;
+            top: -1.5rem;
+            right: -1.5rem;
+            background: #fbbf24;
+            color: #92400e;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: bold;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d97706;
+        }
+
+        /* Learning Modules */
+        .modules {
+            padding: 4rem 0;
+            background: rgba(254, 252, 232, 0.5);
+            border-top: 2px solid #fbbf24;
+            border-bottom: 2px solid #fbbf24;
+        }
+
+        .modules-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .decorative-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .line {
+            width: 6rem;
+            height: 0.25rem;
+            background: #b45309;
+        }
+
+        .diamond {
+            width: 1rem;
+            height: 1rem;
+            background: #b45309;
+            transform: rotate(45deg);
+            margin: 0 0.5rem;
+        }
+
+        .modules-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .modules-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .modules-description {
+            font-size: 1.25rem;
+            color: #a16207;
+            max-width: 48rem;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .modules-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .modules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .module-card {
+            background: rgba(254, 252, 232, 0.8);
+            backdrop-filter: blur(4px);
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .module-card:hover {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .module-header {
+            padding: 1.5rem 1.5rem 1rem;
+        }
+
+        .module-icon-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .module-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d97706;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .module-card:hover .module-icon {
+            transform: scale(1.1);
+        }
+
+        .module-icon.amber { background: #b45309; }
+        .module-icon.emerald { background: #047857; }
+        .module-icon.purple { background: #7c3aed; }
+        .module-icon.orange { background: #ea580c; }
+
+        .module-info {
+            flex: 1;
+        }
+
+        .module-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #92400e;
+            transition: color 0.3s ease;
+        }
+
+        .module-card:hover .module-title {
+            color: #1e40af;
+        }
+
+        .module-badge {
+            background: transparent;
+            border: 1px solid #fbbf24;
+            color: #a16207;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+        }
+
+        .module-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .module-description {
+            color: #a16207;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .module-btn {
+            width: 100%;
+            background: #d97706;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .module-btn:hover {
+            background: #1e40af;
+        }
+
+        /* Quote Section */
+        .quote {
+            padding: 4rem 0;
+            background: linear-gradient(to right, #a16207, #92400e);
+            color: #fef3c7;
+            border-top: 4px solid #d97706;
+            border-bottom: 4px solid #d97706;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fillOpacity='0.2'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+
+        .quote-content {
+            text-align: center;
+            max-width: 64rem;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .quote-mark {
+            font-size: 4rem;
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 768px) {
+            .quote-text {
+                font-size: 1.875rem;
+            }
+        }
+
+        .quote-mark.rotated {
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+
+        .quote-author {
+            color: #fde68a;
+            font-size: 1.125rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 4rem 0;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, #fef3c7, #fed7aa);
+            border: 4px solid #fbbf24;
+            border-radius: 0.5rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .cta-card {
+                padding: 3rem;
+            }
+        }
+
+        .cta-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            color: #a16207;
+            margin-bottom: 2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: #92400e;
+            color: #fef3c7;
+            padding: 3rem 0;
+            border-top: 4px solid #b45309;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: #b45309;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #d97706;
+        }
+
+        .footer-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .footer-description {
+            color: #fde68a;
+            line-height: 1.6;
+        }
+
+        .footer-section h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #fde68a;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #fed7aa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fef3c7;
+        }
+
+        .footer-bottom {
+            border-top: 2px solid #a16207;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: #fed7aa;
+        }
+
+        /* Icons */
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: currentColor;
+        }
+
+        .icon-sm {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .icon-lg {
+            width: 2rem;
+            height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="decorative-border"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 17a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3.9a2 2 0 0 1-1.69-.9l-.81-1.2a2 2 0 0 0-1.67-.9H8a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2Z"/>
+                            <path d="M8 21h8"/>
+                            <path d="M12 17v4"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Life and Works of Rizal</h1>
+                        <p>Comprehensive Study Platform</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                    Est. 1956 (RA 1425)
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">Philippine National Hero</div>
+                    <h1 class="hero-title">Dr. José Protasio Rizal Mercado y Alonzo Realonda</h1>
+                    <p class="hero-description">
+                        Discover the extraordinary life and revolutionary works of Dr. José Rizal, the Philippines' national
+                        hero, through this educational journey into the 19th century.
+                    </p>
+
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <p class="highlight-label">Language Learned</p>
+                            <p class="highlight-value">Speaking Spanish, French, German, and Tagalog fluently, among other languages</p>
+                        </div>
+                        <div class="highlight-card">
+                            <p class="highlight-label">Born</p>
+                            <p class="highlight-value">June 19, 1861</p>
+                        </div>
+                        <div class="highlight-card">
+                            <p class="highlight-label">Famous Works</p>
+                            <p class="highlight-value">Noli me Tangere& El Filibusterismo</p>
+                        </div>
+                        <div class="highlight-card">
+                            <p class="highlight-label">Professions</p>
+                            <p class="highlight-value">Writer, Doctor, Reformist</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#modules" class="btn btn-primary">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                            Begin Your Journey
+                        </a>
+                        <a href="timeline.html" class="btn btn-outline">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Explore Timeline
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portrait-container">
+                    <div class="portrait-frame">
+                        <div class="portrait-img">
+                          <img src="images/pepe.jpg" class="portrait-img"> 
+                        </div>
+                        <div class="portrait-date">1861-1896</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Modules -->
+    <section id="modules" class="modules">
+        <div class="container">
+            <div class="modules-header">
+                <div class="decorative-line">
+                    <div class="line"></div>
+                    <div class="diamond"></div>
+                    <div class="line"></div>
+                </div>
+                <h2 class="modules-title">Explore Life and Works</h2>
+                <p class="modules-description">
+                    Journey through Rizal's remarkable life story and examine his influential literary and political works
+                    that shaped Philippine history and national consciousness in the 19th century.
+                </p>
+            </div>
+
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon-row">
+                            <div class="module-icon amber">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4"/>
+                                    <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h18z"/>
+                                    <path d="M3 12v7c0 .552.448 1 1 1h16c.552 0 1-.448 1-1v-7"/>
+                                </svg>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Republic Act 1425: The Rizal Law</h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Learn about the law that Philippine law that requires all educational institutions in the Philippines to offer courses about José Rizal.
+                        </p>
+                        <a href="rizal-law.html" class="module-btn">
+                            Explore
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon-row">
+                            <div class="module-icon emerald">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">19th Century Philippines as Rizal's Context</h3>
+                      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Explore the historical, social, and political landscape of the Philippines during Rizal's time
+                        </p>
+                        <a href="19th-century-context.html" class="module-btn">
+                            Explore
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon-row">
+                            <div class="module-icon purple">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Rizal's Life: Family, Childhood, and Early Education</h3>
+                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Discover Rizal's formative years, family background, and early educational experiences
+                        </p>
+                        <a href="early-life.html" class="module-btn">
+                            Explore
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon-row">
+                            <div class="module-icon orange">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="10" r="3"/>
+                                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/>
+                                </svg>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Rizal's Life: Higher Education and Life Abroad</h3>
+                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Follow Rizal's journey through higher education and his transformative years in Europe
+                        </p>
+                        <a href="higher-education.html" class="module-btn">
+                            Explore 
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote">
+        <div class="container">
+            <div class="quote-content">
+                <div class="quote-mark">"</div>
+                <blockquote class="quote-text">
+                   Ang hindi magmahal sa sariling wika, daig pa ang hayop at malansang isda.
+                </blockquote>
+                <div class="quote-mark rotated">"</div>
+                <p class="quote-author">— Dr. José Rizal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-card">
+                <div class="decorative-line">
+                    <div class="line"></div>
+                    <div class="diamond"></div>
+                    <div class="line"></div>
+                </div>
+                <h3 class="cta-title">Ready to Begin Your Journey?</h3>
+                <p class="cta-description">
+                    Start exploring the fascinating life and enduring legacy of Dr. José Rizal through our
+                    educational modules, designed to transport you back to the 19th century Philippines with Life and Works of Rizal.
+                </p>
+                <div class="cta-buttons">
+                    <a href="rizal-law.html" class="btn btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                        Begin
+                    </a>
+                    <a href="#modules" class="btn btn-outline">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="10" r="3"/>
+                            <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/>
+                        </svg>
+                        View All Resources
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 17a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3.9a2 2 0 0 1-1.69-.9l-.81-1.2a2 2 0 0 0-1.67-.9H8a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2Z"/>
+                                <path d="M8 21h8"/>
+                                <path d="M12 17v4"/>
+                            </svg>
+                        </div>
+                        <span class="footer-title">Life and Works of Rizal</span>
+                    </div>
+                    <p class="footer-description">
+                        Comprehensive educational platform exploring the extraordinary life and revolutionary works of Dr. José
+                        Rizal in the context of 19th century Philippines.
+                    </p>
+<br>
+                     <p class="footer-description">
+                   Reference: Nery, I. C., & Sion, P. J. G. (n.d.). The life and works of Jose Rizal. Rex Book Store. ISBN 978-621-95942-5-7
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Learning Sections</h4>
+                    <ul class="footer-links">
+                        <li><a href="rizal-law.html">The Rizal Law</a></li>
+                        <li><a href="19th-century-context.html">19th Century Context</a></li>
+                        <li><a href="early-life.html">Early Life & Education</a></li>
+                        <li><a href="higher-education.html">Higher Education Abroad</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Life and Works of Rizal, Group 4-BSIT-3A.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        
+    </script>
+</body>
+</html>
