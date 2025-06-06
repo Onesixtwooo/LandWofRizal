@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Republic Act 1425: The Rizal Law - Life and Works of Rizal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 50%, #d4c4a0 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23d4af8c' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid rgba(146, 64, 14, 0.3);
+            background: rgba(254, 252, 232, 0.9);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #a16207;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #fef3c7;
+        }
+
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid #fbbf24;
+            font-size: 0.875rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 3rem 0 4rem;
+            position: relative;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            border: 4px solid rgba(146, 64, 14, 0.3);
+        }
+
+        .hero::before {
+            top: 2rem;
+            left: 2rem;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .hero::after {
+            top: 2rem;
+            right: 2rem;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, #b45309, #92400e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d97706;
+            margin: 0 auto 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #a16207;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .decorative-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line {
+            width: 6rem;
+            height: 0.25rem;
+            background: #b45309;
+        }
+
+        .diamond {
+            width: 1rem;
+            height: 1rem;
+            background: #b45309;
+            transform: rotate(45deg);
+            margin: 0 0.5rem;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 4rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .section-card {
+            border: 2px solid #fbbf24;
+            background: rgba(254, 252, 232, 0.9);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .section-header {
+            padding: 1.5rem;
+        }
+
+        .section-icon-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-icon {
+            width: 3rem;
+            height: 3rem;
+            background: #b45309;
+            border-radius: 50%;
+            color: #fef3c7;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d97706;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-info h3 {
+            font-size: 1.5rem;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-info p {
+            color: #b45309;
+        }
+
+        .section-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .photo-section {
+            background: rgba(254, 243, 199, 0.5);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #fbbf24;
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .photo-placeholder {
+            background: #fef3c7;
+            border: 2px solid #fbbf24;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            min-height: 200px;
+            max-height: 400px;
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .img {
+            
+        
+            border-radius: 0.5rem;
+        
+            min-height: 200px;
+            max-height: 280px;
+          
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .photo-content {
+            color: #b45309;
+            
+        }
+
+        .photo-icon {
+            width: 4rem;
+            height: 4rem;
+            background: #fde68a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem;
+        }
+
+        .content-section {
+            background: rgba(254, 243, 199, 0.5);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #fbbf24;
+        }
+
+        .content-text {
+            color: #a16207;
+            font-style: italic;
+            text-align: justify;
+            margin-bottom: 1rem;
+        }
+
+        .content-divider {
+            border-top: 1px solid #fbbf24;
+            padding-top: 1rem;
+        }
+
+        .content-title {
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-list {
+            color: #a16207;
+            font-size: 0.875rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Navigation */
+        .navigation {
+            padding: 3rem 0;
+            background: rgba(254, 252, 232, 0.5);
+            border-top: 2px solid #fbbf24;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-outline {
+            border: 2px solid #b45309;
+            color: #a16207;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #fef3c7;
+        }
+
+        .btn-primary {
+            background: #b45309;
+            color: #fef3c7;
+            border-color: #d97706;
+        }
+
+        .btn-primary:hover {
+            background: #92400e;
+        }
+
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+        }
+
+        .icon-lg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"/>
+                        <path d="M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Home
+                </a>
+                <div class="badge">Module 1</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h18z"/>
+                        <path d="M3 12v7c0 .552.448 1 1 1h16c.552 0 1-.448 1-1v-7"/>
+                    </svg>
+                </div>
+                <h1 class="hero-title">Republic Act 1425: The Rizal Law</h1>
+                <p class="hero-description">
+                    Exploring the legal foundation that mandates the study of José Rizal's life and works in Philippine
+                    educational institutions
+                </p>
+                <div class="decorative-line">
+                    <div class="line"></div>
+                    <div class="diamond"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Overview Section -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4"/>
+                                    <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h18z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Overview of Republic Act 1425</h3>
+                                <p>Understanding the legal foundation and purpose of the Rizal Law</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                       
+                        <div class="content-section">
+                            <p class="content-text">
+                           The Rizal Law, also known as Republic Act No. 1425, is a Philippine law that mandates José Rizal studies be taught in all Philippine schools.  Due primarily to the anti-clericalism in Rizal's books Noli Me Tángere and El Filibusterismo, the Philippine Catholic Church strongly opposed the Rizal Law.
+                            </p>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historical Context Section -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Historical Context & Background</h3>
+                                <p>The circumstances that led to the creation of the law in 1956</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                       
+                                        <img src="images/image1.jpg" class="img">
+                                        <p>*On Photo: President Ramon Magsaysay with Senators Laurel and Claro M. Recto</p>
+                                    </div>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                       
+                             
+                              <img src="images/rizal-law-ra-1425-250302125008-70fe8d51-thumbnail.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <p class="content-text">
+                               It is crucial to note that on April 3, 1956, Senate Bill No. 438 was sent to the Senate Committee on Education prior to the Rizal Law's passage.  The purpose of this bill was to mandate that José Rizal's life, writings, and works—particularly his novels Noli Me Tangere and El Filibusterismo—be taught in all public and private schools, colleges, and universities.  Additionally, the bill approved the printing and distribution of these and related works.
+                            </p>
+                            <p class="content-text"> The late Senator José P. Laurel, who was the Committee on Education's chairman at the time, formally sponsored the bill and introduced it in the Senate on April 17, 1956.  The primary objective of the bill, according to Senator Laurel, was to spread awareness of Rizal's principles and beliefs by promoting the reading of his writings, especially Noli Me Tangere and El Filibusterismo.</p>
+                            <p class="content-text"> He underlined that all Filipinos should read and comprehend these novels because they are a mirror reflecting the country's virtues, shortcomings, strengths, and flaws. According to Laurel, Filipinos could prepare for the sacrifices required to attain independence, dignity, and eventually freedom by developing this self-awareness</p>
+                                     <p class="content-text">A similar proposal, House Bill No. 5561, was simultaneously introduced in the House of Representatives by Congressman Jacobo Z. Gonzales. However, this bill encountered resistance due to constitutional and religious concerns, just like its Senate counterpart. Instead of concentrating only on Noli Me Tangere and El Filibusterismo, a revised version of the bill was introduced that included all of Rizal's writings and works. </p>
+                                              <p class="content-text">Additionally, the deceased Senator Jose P. Laurel emphasized the significance of
+reading Rizal's book in its original, unexpurgated form, as failing to do so will defeat the real goal of studying it. On the second reading and in the Lower House, Senate Bill No. 438 and House Bill No. 5561 were both unanimously approved on May 12 and May 14, 1956. </p>
+                                                       <p class="content-text">President Ramon Magsaysay signed the bill into law on June 12, 1956, creating Republic Act 1425, also known as the Rizal Law. </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Provisions Section -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14,2 14,8 20,8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                    <polyline points="10,9 9,9 8,9"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Key Provisions & Requirements</h3>
+                                <p>The Details of the law's mandates and requirements</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                       
+                        <div class="content-section">
+                            <p class="content-text">
+                              The law has a provisions as stated in the Law. It requires all Philippine educational institutions to teach about Jose Rizal's life and contributions.  Its main goals are to instill in students the values of nationalism and freedom, honor Rizal for his contribution to the formation of Filipino identity, and encourage patriotism.
+                            </p>
+                            <p class="content-text"> Here are the sections stated in the Law: </p>
+                                     <p class="content-text">SECTION 1. Courses on the life, works and writings of Jose Rizal, particularly his novels Noli Me Tangere and El Filibusterismo, shall be included in the curricula of all schools, colleges and universities, public or private; Provided, That in the collegiate courses, the original or unexpurgated editions of the Noli Me Tangere and El Filibusterismo or their English translation shall be used as basic texts. </p>
+                                              <p class="content-text">The Board of National Education is hereby authorized and directed to adopt forthwith measures to implement and carry out the provisions of this Section, including the writing and printing of appropriate primers, readers and textbooks.  The Board shall, within sixty (60) days from the effectivity of this Act promulgate rules and regulations, including those of a disciplinary nature, to carry out and enforce the provisions of this Act. The Board shall promulgate rules and regulations providing for the exemption of students for reasons of religious belief stated in a sworn written statement, from the requirement of the provision contained in the second part of the first paragraph of this section; but not from taking the course provided for in first part of said paragraph. Said rules and regulations shall take effect thirty (80) days after their publication in the Official Gazette. </p>
+                                                       
+                                              <p class="content-text">SEC. 2. It shall be obligatory on all schools, and universities to keep in their libraries an adequate copies of the original and unexpurgated editions of Noli Me Tangere and El Filibusterismo as well as of Rizal’s other works and biography. The said unexpurgated editions of the Noli Me Tangere and El Filibusterismo or their translations in English as well as other writings of Rizal shall be included in the list of approved books for required reading in all public or private schools colleges and universities.
+ </p>
+                                                                <p class="content-text">The Board of National Education shall determine the adequacy of the number of books, depending upon the enrollment of the school, college or university.</p>
+                                                                        
+                                                                <p class="content-text">SEC. 3. The Board of National Education shall cause the translation of the Noli Me Tangere and El Filibusterismo, as well as other writings of Jose Rizal into English, Tagalog and the principal Philippine dialects; cause them to be printed in cheap, popular editions; and cause them to be distributed, free of charge, to persons desiring to read them, through the Purok organizations and Barrio Councils throughout the country.
+ </p>
+                                                                <p class="content-text">SEC. 4. Nothing in this Act shall be construed as amending or repealing section nine hundred twenty-seven of the Administrative Code, prohibiting the discussion of religious doctrines by public school teachers and other person engaged in any public school </p>
+                                                                <p class="content-text">SEC. 5. The sum of three hundred thousand pesos is hereby authorized to be appropriated out of any fund not otherwise appropriated in the National Treasury to carry out the purposes of this Act. </p>
+<p class="content-text">SEC 6. This Act shall take effect upon its approval. </p>
+         <p class="content-text"> Approved, June 12, 1956.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Implementation Section -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Implementation & Impact</h3>
+                                <p>How the law has been implemented in Philippine education</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        
+                        <div class="content-section">
+                            <p class="content-text">
+                        On June 12, 1956, Republic Act 1425, also referred to as the Rizal Law, was approved, making it mandatory for all Philippine college programs to study Jose Rizal's life and works.  Before anyone can graduate from any Philippine institution with a college degree, they must now complete this course.  Their love of freedom, nationalism, and patriotism will be further strengthened by the course, which will include Rizal.
+                            </p>
+                             <p class="content-text">
+                 Later, President Fidel V. Ramos issued Memorandum Order No. 247 on December 26, 1994, which outlines the complete implementation of Republic Act No. 1425, popularly referred to as the Rizal Law.  This law requires all public and private schools, colleges, and universities in the Philippines to offer courses on José Rizal's life, works, and writings, especially his novels Noli Me Tangere and El Filibusterismo.
+                            </p>
+                              <p class="content-text">
+                        This memorandum was issued in conjunction with the upcoming centennial celebrations of the Declaration of Philippine Independence in 1998 and the martyrdom of Rizal in 1996.  By teaching the youth about Rizal's contributions to the history of the country, the memorandum highlights the value of fostering in them a sense of patriotism and national pride.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Debates & Controversies Section -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Debates & Controversies</h3>
+                                <p>Opposition faced and debates surrounding the law's passage</p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                       
+                                        <img src="images/rizal_execution.jpeg" class="img">
+                                        <p>*On Photo: Rizal's Execution<br> (Courtesy of Wikimedia Commons / Photo by Jorge Láscar)</p>
+                                    </div>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                       
+                             
+                              <img src="images/cbcp_statement.png" class="img">
+                              <a href="https://cbcponline.net/statement-of-the-philippine-hierarchy-on-the-novels-of-dr-jose-rizal/">CPCP Statement on Rizal Law(April 21, 1956)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="section-content">
+                       
+                        <div class="content-section">
+                            <p class="content-text">
+                               Only three people opposed the bill when Senator Recto introduced it to the Senate. The debate between the two sides began when Senator Laurel, who was the head of the education committee, sponsored the bill. Due to their intervention in approving and signing this bill into law, the Church was heavily involved in this battle.
+                            </p>
+                            <p class="content-text">
+                               Naturally, Senator Laurel, who supported the bill during the discussions, was on Senator Rectos' side. Congressmen Jacobo Z. Gonzalez, Emilio Cortez, Mario Bengzon, Joaquin Roxas, Lancap Lagumbay, Quintin Paredes, and Senator Domocao Alonto of Mindanao were among the other members of the house who backed the bill.
+                            </p>
+                            <p class="content-text">
+                               However, Senator Francisco Rodrigo, Senator Mariano J. Cuenco, and Senator Decoroso Rosales opposed the original bill.   Senator Cuenco was the brother of an archbishop, and Senator Rodrigo was a former president of Catholic Action.  Congressmen Ramon Durano, Jose Nuguid, Marciano Lim, Manuel Zosa, Lucas Paredes, Godofredo Ramos, Miguel Cuenco, and Congresswomen Carnen Consing and Tecia San Andres Ziga also opposed it from the lower house.
+                            </p>
+                            <p class="content-text">
+                               The bill's supporters contended that reading Rizal's writings helps Filipinos recognize their own qualities and shortcomings.  People learn about the sacrifices required to attain true freedom through Rizal's writings, which are regarded as essential to comprehending Filipino identity.  The primary goal of the bill is to increase understanding of Rizal's contribution to the fight against Spanish colonialism, not to disparage any religion.
+                            </p>
+                            <p class="content-text">
+                                However, the bill's opponents argued that it would violate religious and conscience freedom. Rizal's novels are in violation of Canon Law 1399, which forbids writing that disparages or contradicts Catholic doctrine, the CBCP noted. They pointed out that only 25 of Noli Me Tangere's 333 pages are patriotic, while the remaining 120 are deemed anti-Catholic.Rizal acknowledged that he questioned the Catholic faith in addition to criticizing dishonest friars.  He even recanted these claims in his final will and testament.  Critics contend that criticizing the Church is not necessary to advance nationalism.  Rather, they suggested a Rizalian Anthology, which would be a compilation of Rizal's patriotic works that would not include any contentious material.  Senator Francisco Rodrigo went on to say that Filipinos can still honor Rizal without reading his novels because he would still be a hero even without them.   
+                            </p>
+                            <p class="content-text">
+                         The Catholic Church encouraged its adherents to write to lawmakers and later hosted symposiums in opposition to the Rizal Bill.  In one instance, Fr.  According to Jesus Cavanna, Rizal's books were out of date and would be inaccurate in reflecting the times.  Jesus Paredes, a radio commentator, went on to say that Catholics were free to decline to read them because doing so might "endanger their salvation."
+                            </p>
+         <p class="content-text"> The opposition was led by organizations such as the Catholic Teachers Guild, the Congregation of the Mission, the Knights of Columbus, and the Catholic Action of the Philippines. On the other hand, the bill was supported by the Knights of Rizal, the Freemasons, Alagad ni Rizal, and the Veteranos de la Revolucion. A version of the bill, co-authored by José P. Laurel and Claro M. Recto, was approved by the Senate Committee on Education. Francisco "Soc" Rodrigo, Mariano Jesús Cuenco, and Decoroso Rosales were the main opponents.</p>
+                  <p class="content-text">In a pastoral letter, Manila Archbishop Rufino Santos cautioned that forcing students to read the unabridged versions would have a detrimental effect on young Catholics. When a priest read the archbishop's letter denouncing the bill, Manila Mayor Arsenio Lacson, who supported it, even left Mass. </p>
+                           <p class="content-text">Senator Cuenco argued that Rizal questioned Church doctrine, including the existence of purgatory, in addition to denouncing dishonest priests.  He maintained that it was dangerous and misleading to deny such dogmas.  Senator Domocao Alonto, meanwhile, chastised those who hailed Rizal as a hero but disapproved of his writings, pointing out that Indonesians had drawn inspiration from Rizal's works for their own independence.  Congressman Pedro López of Cebu backed the bill as well, citing Lapu-Lapu's rebellion against Magellan as the catalyst for Philippine resistance in their province. </p>
+
+                                    <p class="content-text"> Catholic schools outside the Senate threatened to close if the Rizal Bill was approved. Recto replied that the government would nationalize them if they did. Because he thought the schools were too profitable to close, he questioned the threat. The schools eventually gave in, but they issued a warning that they would politically oppose lawmakers who supported the bill in subsequent elections.</p>
+                                             <p class="content-text">Allowing the use of expurgated versions of Rizal's novels was suggested as a compromise. "Those who want to remove Rizal's books from schools want to erase the memory of our national hero," said Recto, who had advocated for the unabridged versions. This is a battle against Rizal, not against me. </p>
+                                                      <p class="content-text">A compromise proposed by Senator Laurel was unanimously accepted on May 12, 1956. The unabridged versions of Noli Me Tángere and El Filibusterismo were only available to college students. On Flag Day, June 12, 1956, the bill was signed into law.
+ </p>
+                                                               <p class="content-text">Additionally, Section 4 of the law made it clear that: </p>
+                                                                        <p class="content-text"> "This Act shall not be interpreted to amend or repeal Section 927 of the Administrative Code, which forbids public school teachers and other individuals working in any public school from discussing religious doctrines."</p>
+                                                                                 <p class="content-text">This clause made sure that religious beliefs would not be promoted or opposed in the classroom in violation of the Rizal Law. </p>
+                                                                                          <br><br>
+                                                                                          
+<a href="https://web.archive.org/web/20110103191628/http://opinion.inquirer.net/inquireropinion/columns/view/20101231-311789/The-intense-debate-on-the-Rizal-Law" class="content-text">
+Sources: The Intense Debate on the Rizal Law
+</a>
+<br>
+
+<a href="https://teamcrisostomo.wordpress.com/noli-filirizal-bill-one-of-the-most-controversial-bills-in-phil-history/" class="content-text">
+  Noli-Fili Rizal Bill – One of the Most Controversial Bills in Philippine History
+</a>
+<br>
+
+<a href="https://www.scribd.com/document/603136426/The-Life-and-Works-of-Jose-Rizal" class="content-text">
+  The Life and Works of Jose Rizal (Scribd)
+</a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Relevance Section -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="navigation">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="btn btn-outline">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"/>
+                        <path d="M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Home
+                </a>
+                <a href="19th-century-context.html" class="btn btn-primary">
+                    Next: 19th Century Context
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"/>
+                        <path d="M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.section-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add hover effects to section cards
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

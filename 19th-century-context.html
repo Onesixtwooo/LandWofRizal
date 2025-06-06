@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19th Century Philippines as Rizal's Context - Life and Works of Rizal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 50%, #d4c4a0 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23d4af8c' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid rgba(146, 64, 14, 0.3);
+            background: rgba(254, 252, 232, 0.9);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #a16207;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #fef3c7;
+        }
+
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid #fbbf24;
+            font-size: 0.875rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 3rem 0 4rem;
+            position: relative;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            border: 4px solid rgba(146, 64, 14, 0.3);
+        }
+
+        .hero::before {
+            top: 2rem;
+            left: 2rem;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .hero::after {
+            top: 2rem;
+            right: 2rem;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, #047857, #065f46);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #059669;
+            margin: 0 auto 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #a16207;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .decorative-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line {
+            width: 6rem;
+            height: 0.25rem;
+            background: #b45309;
+        }
+
+        .diamond {
+            width: 1rem;
+            height: 1rem;
+            background: #b45309;
+            transform: rotate(45deg);
+            margin: 0 0.5rem;
+        }
+
+        /* Overview Section */
+        .overview {
+            padding: 4rem 0;
+            background: rgba(254, 252, 232, 0.3);
+            border-top: 2px solid #fbbf24;
+            border-bottom: 2px solid #fbbf24;
+        }
+
+        .overview-content {
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .overview-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .overview-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .overview-subtitle {
+            font-size: 1.25rem;
+            color: #a16207;
+            font-style: italic;
+        }
+
+        .overview-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .overview-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .overview-text {
+            background: rgba(254, 252, 232, 0.8);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 2px solid #fbbf24;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .overview-text h3 {
+            color: #92400e;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .overview-text p {
+            color: #a16207;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 1rem;
+        }
+
+        .overview-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .overview-image {
+            position: relative;
+            background: rgba(254, 252, 232, 0.8);
+            border-radius: 0.75rem;
+            border: 2px solid #fbbf24;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .overview-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .overview-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .overview-image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(146, 64, 14, 0.9));
+            color: #fef3c7;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .overview-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(254, 252, 232, 0.8);
+            border: 2px solid #fbbf24;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .stat-icon {
+            width: 3rem;
+            height: 3rem;
+            background: #047857;
+            border-radius: 50%;
+            color: #ecfdf5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            border: 2px solid #059669;
+        }
+
+        .stat-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-description {
+            font-size: 0.875rem;
+            color: #a16207;
+            line-height: 1.5;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 4rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .section-card {
+            border: 2px solid #fbbf24;
+            background: rgba(254, 252, 232, 0.9);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .section-header {
+            padding: 1.5rem;
+        }
+
+        .section-icon-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-icon {
+            width: 3rem;
+            height: 3rem;
+            background: #047857;
+            border-radius: 50%;
+            color: #ecfdf5;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #059669;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-info h3 {
+            font-size: 1.5rem;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-info p {
+            color: #b45309;
+        }
+
+        .section-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .photo-section {
+            background: rgba(254, 243, 199, 0.5);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #fbbf24;
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .photo-placeholder {
+            background: #fef3c7;
+            border: 2px solid #fbbf24;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .photo-content {
+            color: #b45309;
+        }
+
+        .photo-icon {
+            width: 4rem;
+            height: 4rem;
+            background: #a7f3d0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem;
+        }
+
+        .content-section {
+            background: rgba(254, 243, 199, 0.5);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #fbbf24;
+        }
+
+        .content-text {
+            color: #a16207;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .content-divider {
+            border-top: 1px solid #fbbf24;
+            padding-top: 1rem;
+        }
+
+        .content-title {
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-list {
+            color: #a16207;
+            font-size: 0.875rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Navigation */
+        .navigation {
+            padding: 3rem 0;
+            background: rgba(254, 252, 232, 0.5);
+            border-top: 2px solid #fbbf24;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-outline {
+            border: 2px solid #b45309;
+            color: #a16207;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #fef3c7;
+        }
+
+        .btn-primary {
+            background: #b45309;
+            color: #fef3c7;
+            border-color: #d97706;
+        }
+
+        .btn-primary:hover {
+            background: #92400e;
+        }
+
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+        }
+
+        .icon-lg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    </style>
+    <style>
+        .photo-placeholder {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .photo-placeholder img {
+            transition: transform 0.5s ease;
+        }
+        
+        .photo-placeholder:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"/>
+                        <path d="M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Home
+                </a>
+                <div class="badge">Module 2</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </div>
+                <h1 class="hero-title">19th Century Philippines as Rizal's Context</h1>
+                <p class="hero-description">
+                    Understanding the historical, social, and political landscape that shaped José Rizal's worldview and
+                    revolutionary ideas
+                </p>
+                <div class="decorative-line">
+                    <div class="line"></div>
+                    <div class="diamond"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-header">
+                    <div class="decorative-line">
+                        <div class="line"></div>
+                        <div class="diamond"></div>
+                        <div class="line"></div>
+                    </div>
+                    <h2 class="overview-title">Overview</h2>
+                    <p class="overview-subtitle"> A time of significant political, social, and economic changes.</p>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-text">
+                       
+                        <p>
+                           The Philippines has undergone numerous changes over the years.  Due to the numerous historical events that have afflicted the nation, various changes have occurred.  We will categorize social, political, economic, and cultural changes in the Philippines during the 19th century in this lesson.
+                        </p>
+                        <p>
+                            The nineteenth century is seen as the beginning of modern existence, and more specifically, the emergence of numerous nation-states worldwide. Let's examine the various advancements and successes of the nineteenth century that altered and molded the political, social, and economic environment of the Philippines in order to comprehend what Dr. Rizal accomplished at that time.
+                        </p>
+                        <p>
+Three revolutions were brought about by the emergence of modernity: the
+The American Revolution, the French Revolution in France, and the Industrial Revolution in England. In several regions of the world, the Spanish had already gained a great deal of authority throughout these times.
+                        </p>
+                    </div>
+
+                    <div class="overview-image">
+                        <img src="images/frailes-de-filipinas.jpg" 
+                             alt="Map of 19th Century Philippines" 
+                             crossorigin="anonymous">
+                        <div class="overview-image-caption">
+                            <strong>Frailes de Filipinas</strong><br>
+                           
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Spanish Colonial System -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Political System in the Philippines under Spanish Colonial Rule</h3>
+                                <p>The structure and administration of Spanish rule in the Philippines</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <img src="images/1.jpg" 
+                                         alt="Intramuros in the 19th Century" 
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.375rem;"
+                                         crossorigin="anonymous">
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                     Salamat, Christopher John. “Resistance, assimilation, and the building of the Filipino republic: Architecture of Arcadio and Juan Arellano.” (2013).
+                                    </p>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <img src="images/Diego_de_los_Ríos_y_Nicolau_(22_de_enero_de_1910,_La_Ilustración_Española_y_Americana,_Franzen).jpg" 
+                                         alt="Spanish Governor-General" 
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.375rem;"
+                                         crossorigin="anonymous">
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                      Diego de los Ríos y Nicolau
+                                        The 116th Spanish Governor-General of the Philippines
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <h4 style="color: #92400e; font-size: 1.25rem; margin-bottom: 1rem; text-align: center;">Spanish Colonial System</h4>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                               Spanish colonial rule in the Philippines, which lasted from 1565 to 1898, was characterized by a racially stratified society, economic exploitation, a centralized system of government, and a strong religious influence.  The colony was governed by the Governor-General, who held extensive authority over civil, military, and religious affairs and operated in the name of the Spanish king.  Filipino elites exercised local governance under the watchful eye of Spanish officials and clergy, while the country was split up into provinces ruled by Spanish officials.
+                            </p>
+                           
+                        </div>
+                        <div class="photo-section" style="margin-top: 1.5rem;">
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: center;">Political System in the Philippines under Spanish Colonial Rule</h5>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                               Spanish colonial rule in the Philippines, which lasted from 1565 to 1898, was characterized by a racially stratified society, economic exploitation, a centralized system of government, and a strong religious influence.  The colony was governed by the Governor-General, who held extensive authority over civil, military, and religious affairs and operated in the name of the Spanish king.  Filipino elites exercised local governance under the watchful eye of Spanish officials and clergy, while the country was split up into provinces ruled by Spanish officials.
+                            </p>
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <img src="images/images.jpg" 
+                                         alt="Intramuros in the 19th Century" 
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.375rem;"
+                                         crossorigin="anonymous">
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                     Spanish Colonial Government
+                                    </p>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">The political system in the Philippines under Spanish colonial rule was highly centralized and authoritarian, with ultimate authority resting in the hands of the Spanish monarch. The king governed the colony through the Governor-General, who served as his representative in the Philippines. The Governor-General had extensive powers, including executive, legislative, and judicial authority, and was the highest official in the colony.</p>
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                     Spanish Colonial Government
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                           <h4 h4 style="color: #92400e; font-size: 1.25rem; margin-bottom: 1rem; text-align: left;">Executive Branch</h4> 
+                           <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;"> During the Spanish colonial period, the Philippines was governed by a Governor-General who served as the highest executive authority, directly appointed by the Spanish king. This official acted on behalf of the monarch and had almost unlimited powers. He controlled the military, enforced laws, appointed local officials, and managed the finances of the colony. Because there were few checks on his power, abuses and corruption were common, especially since many governor-generals prioritized their personal interests or loyalty to the Church rather than the well-being of Filipinos.</p> 
+                            
+                           <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Local Government Unit</h5> 
+                           <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;"> At the local level, the Spanish retained the barangay system but placed it under colonial supervision.</p> 
+                           
+                           <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">1. Alcalde Mayor / Corregidor (Provincial Level)</h5>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+At the provincial level, governance was led by either an <strong>Alcalde Mayor</strong> or a <strong>Corregidor</strong>, depending on the province’s status. The <em>Alcalde Mayor</em> governed more established and pacified provinces, while the <em>Corregidor</em> was assigned to newly conquered or unstable areas. These officials were appointed by the Spanish crown and acted as the King’s representatives in their provinces. They held both <strong>executive and judicial powers</strong>, enforced laws, collected taxes, and ensured that the interests of the Spanish government were maintained. Due to their broad authority and often minimal oversight from Manila, many were prone to corruption and abuse of power.
+</p>
+
+<h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">2. Pueblo, Gobernadorcillo, Lieutenants, and the City Council (Town and City Level)</h5>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Each province was divided into <strong>pueblos</strong> or towns, which served as the main units of local administration. Each pueblo was headed by a <strong>Gobernadorcillo</strong>, also known as the “little governor,” elected annually by the <em>principalia</em>, the local native elite. The gobernadorcillo was responsible for managing town affairs, collecting taxes, supervising public works, maintaining peace and order, and implementing colonial directives. Despite being native Filipinos, gobernadorcillos worked closely with Spanish friars, who often held strong influence over both religious and civil matters in the town.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+To assist in governing the pueblo, the gobernadorcillo was supported by four lieutenants, each assigned a specific area of responsibility. The <strong>Teniente Mayor</strong> acted as the chief assistant and assumed the gobernadorcillo’s role in their absence. The <strong>Teniente de Policía</strong> maintained peace and order, supervised the local police, and handled minor disputes. The <strong>Teniente de Sementeras</strong> oversaw agricultural lands, especially rice fields, and ensured proper planting and harvest practices. Meanwhile, the <strong>Teniente de Ganados</strong> was in charge of managing and regulating livestock. These lieutenants, drawn from the principalia, ensured that daily administrative tasks and colonial policies were effectively carried out.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+In larger urban centers or cities, a more formal governing body known as the <strong>Cabildo</strong> or city council operated alongside the provincial administration. The Cabildo was composed of several important officials. At its head was the <strong>Alcalde Mayor</strong>, who served as the chief executive of the city. The <strong>Regidores</strong> acted as council members, shaping policies and decisions on local matters. The <strong>Alguacil Mayor</strong> functioned similarly to a chief of police, ensuring law enforcement and the implementation of council directives. Lastly, the <strong>Escribano</strong> served as the official scribe or notary, responsible for documenting proceedings, maintaining records, and drafting legal documents. The Cabildo functioned as the legislative and administrative body of colonial cities and symbolized Spanish authority at the local urban level.
+</p>
+
+
+
+
+<h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">3. Barangay and Cabeza de Barangay (Village Level)</h5>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Below the pueblo level were the <strong>barangays</strong>, the smallest administrative units, which were originally independent communities in pre-Hispanic times. Under Spanish rule, several barangays were grouped together to form a pueblo. Each barangay was headed by a <strong>Cabeza de Barangay</strong>, usually a member of the <em>principalia</em> or a descendant of local nobility. The cabeza served as the link between the townspeople and the higher colonial officials. Their duties included collecting tributes (taxes), enforcing colonial policies, and helping maintain local peace and order. In recognition of their service, cabezas and their families were often granted privileges such as exemption from paying tribute and the right to join the principalia.
+</p>
+ 
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           <h4 h4 style="color: #92400e; font-size: 1.25rem; margin-bottom: 1rem; text-align: left;">Judicial Branch</h4> 
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;"> By combining executive, legislative, and judicial duties, the Governor-General occupied a special and potent position.  The Governor-General was essentially the colony's chief executive, but because the Philippines lacked an independent legislature, he also had the power to enact local laws and ordinances.  By selecting judges and getting involved in court cases when he felt it was appropriate, he also had a big say in the legal system, which frequently led to centralized and capricious rule.</p> 
+                            
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Real Audiencia of Manila</h5> 
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6; margin-left:10px"> The highest court in the colony, serving as the supreme judicial authority and handling appeals from lower courts. Besides its judicial functions, the Audiencia had some advisory roles in administration and law enforcement. Ideally, it acted as a check on the Governor-General and other officials by ensuring laws were followed and justice served. However, its independence was limited, as its members were often appointed under the influence of the Governor-General or colonial interests, which reduced its effectiveness as a neutral arbiter.</p> 
+                            
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Residencia</h5> 
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6; margin-left:10px"> A formal review process conducted when an official, especially the Governor-General, completed their term.</p> 
+                            
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Lower Courts</h5> 
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6; margin-left:10px">Presided over by provincial governors called alcaldes mayores and town officials known as gobernadorcillos. These courts handled everyday legal matters such as land disputes, minor crimes, and civil cases. However, the local judiciary was closely tied to the colonial administration, and justice was frequently biased toward Spanish officials, friars, and wealthy elites. Ordinary Filipinos often faced discrimination, corruption, and limited access to fair trials.</p> 
+                            
+                        
+                        </div>
+                          <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;"> The system was designed to maintain control over the population and facilitate the collection of tribute and labor. It left little room for Filipino participation in higher levels of government, reinforcing a system of inequality and dependency that fueled discontent and, eventually, revolutionary movements.</p> 
+                            
+                    </div>
+                </div>
+
+                <!-- Social Hierarchy -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Social Hierarchy & Class System</h3>
+                                <p>Understanding the rigid social stratification of 19th century Philippines</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <img src="images/the pinoy warrior ilustrados.jpg" 
+                                         alt="Filipino Illustrados" 
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.375rem;"
+                                         crossorigin="anonymous">
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                        Filipino Illustrados
+                                    </p>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <img src="images/250px-Pinayavatar.jpg" 
+                                         alt="A mestiza de sangley" 
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.375rem;"
+                                         crossorigin="anonymous">
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                      A mestiza de sangley, c. 1875
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <h4 style="color: #92400e; font-size: 1.25rem; margin-bottom: 1rem; text-align: center;">Social Hierarchy & Class System</h4>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                                The social structure of 19th century Philippines was highly stratified, with clear divisions based on race, wealth, and political power. At the top of this hierarchy were the Peninsulares (Spaniards born in Spain), who held the highest government positions and enjoyed the most privileges. Below them were the Insulares or Creoles (Spaniards born in the Philippines), who despite their Spanish blood, faced discrimination in appointments to high government positions.
+                            </p>
+                           <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Peninsulares</h5>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                            The Peninsulares were Spaniards born in Spain and occupied the highest positions in the colonial administration. They served as governors-general, bishops, judges, and other top officials. Seen as the purest representatives of Spanish authority, Peninsulares enjoyed privileges, influence, and prestige unmatched by other social classes. They looked down on even other Spaniards born in the colonies.
+                            </p>
+
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Insulares (Filipino-Spaniards)</h5>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                            The Insulares, or Filipino-Spaniards, were Spaniards born in the Philippines. Although they had pure Spanish blood, they were considered socially lower than Peninsulares. Many Insulares were wealthy landowners, government officials, and businessmen. Despite their status, they often faced discrimination from Peninsulares and had limited access to the most powerful colonial positions.
+                            </p>
+
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Mestizos</h5>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                            The Mestizos were people of mixed ancestry—usually Spanish and native Filipino. They formed a middle class in colonial society and were often involved in trade, agriculture, and local governance. Spanish Mestizos enjoyed more privilege than the Indios and could rise to positions of influence, especially within the principalia. They served as cultural and economic bridges between the colonizers and the native population.
+                            </p>
+
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Chinese Mestizos</h5>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                            The Chinese Mestizos were people of mixed Chinese and Filipino descent. Many became prosperous merchants, landowners, or moneylenders, especially in urban areas like Manila and Cebu. Over time, they gained influence in local politics and society, particularly as their wealth grew. Some Chinese Mestizos assimilated into the Spanish or principalia classes through intermarriage or education.
+                            </p>
+
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Tornatrás</h5>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                            The Tornatrás were individuals of mixed Spanish, Chinese, and Filipino ancestry. They were fewer in number but typically well-educated and often affluent. Tornatrás were sometimes able to pass as either Spanish or Mestizo depending on appearance and social connections, giving them certain social advantages and mobility within colonial society.
+                            </p>
+
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Ilustrados</h5>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                            The Ilustrados emerged during the late 19th century as a class of educated Filipinos, often from the principalia or mestizo families, who studied in Europe and embraced liberal, nationalist ideas. They played a crucial role in the Propaganda Movement, advocating for reforms, civil rights, and eventual independence. Famous Ilustrados include José Rizal, Marcelo H. del Pilar, and Graciano López Jaena.
+                            </p>
+
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Principalia</h5>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                            The Principalia were the native aristocracy of the Philippines. They were often descendants of pre-colonial rulers or wealthy families who cooperated with the Spanish. The principalia held local government positions such as gobernadorcillo or cabeza de barangay and were exempt from forced labor and tribute. They acted as intermediaries between the Spanish government and the native population.
+                            </p>
+
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">Indios</h5>
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+                            The Indios were the native Filipinos, making up the majority of the population. They had the lowest status in the colonial hierarchy, subjected to tribute, forced labor (polo y servicios), and limited access to education and justice. Despite this, some Indios rose through the ranks via education, military service, or by joining the principalia or Ilustrado class.
+                            </p>
+
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <!-- Economic Conditions -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="1" x2="12" y2="23"/>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Economic Conditions & Trade</h3>
+                                <p>The economic landscape and trade relationships of the era</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <img src="images/EEYka2oXUAIx3o6.jpg" 
+                                         alt="Manila Galleon Trade" 
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.375rem;"
+                                         crossorigin="anonymous">
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                        Manila Galleon Trade Route
+                                    </p>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <img src="images/5045284.png" 
+                                         alt="Sugar Plantation" 
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.375rem;"
+                                         crossorigin="anonymous">
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                        Plantation at Negros
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-section">
+                            <h4 style="color: #92400e; font-size: 1.25rem; margin-bottom: 1rem; text-align: center;">Economic Conditions & Trade</h4>
+                            <h5 style="color: #92400e; font-size: 1rem; margin-bottom: 1rem; text-align: left; margin-left:10px;">
+Economic Conditions in the Philippines During the Spanish Colonial Period
+</h5>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+During the Spanish colonial period, the economic conditions in the Philippines were shaped primarily to benefit the Spanish Empire. The economy was largely agricultural, centered on crops such as rice, corn, sugarcane, tobacco, and coconuts. Land was mostly owned by Spanish friars and elites, while native Filipinos labored under oppressive systems such as tribute, forced labor (polo y servicios), and the encomienda system, where Spanish encomenderos collected tribute and labor from natives in exchange for supposed protection and Christian instruction.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+The Industrial Revolution in Europe during the 19th century introduced steam engines and machines in manufacturing, transforming Europe's economy from agriculture-based to industry-based. Traders became the first capitalists, and former rural farmers migrated to cities as factory workers. This development had a ripple effect across the world, including the Philippines. One major consequence was the opening of the Philippines to world commerce, allowing foreigners to engage in agriculture and manufacturing. This helped create a dynamic and balanced economy and led to the rise of a new, wealthy Filipino middle class, including mestizos and ilustrados. The booming trade encouraged migration and population growth, as people from both the Philippines and abroad flocked to urban centers, especially Manila.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+The Galleon Trade, which once connected Manila and Acapulco, ended in 1810 due to the Mexican War of Independence, which resulted in Spain losing its Latin American colonies. With the dissolution of the Royal Philippine Company, the Philippines transitioned from a closed trade system to open world trade, especially when Manila was officially opened to foreign merchants in 1834. Merchants, especially Spanish and Chinese mestizos, established powerful merchant houses in Manila and financed large-scale agricultural exports. The ilustrados, wealthy and educated Filipinos, also emerged during this time. They sent their children to study in Europe, where they encountered Enlightenment ideals of equality, secularism, and liberalism—concepts that would later influence nationalist movements led by figures like José Rizal.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+The growth of trade and communication was further enabled by infrastructure projects such as the construction of railways, steamships, and bridges, as well as the opening of the Suez Canal in 1869. Built by French engineer Ferdinand de Lesseps, the Suez Canal shortened travel between Europe and Asia, bringing the Philippines into closer contact with the global economy.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+As global trade intensified, the Philippine economy flourished through the export of cash crops like tobacco, sugar, abaca, cotton, coffee, and indigo, which became the main source of revenue. The importance of land increased drastically, leading many provinces to shift from subsistence farming to commercial agriculture. However, this shift also worsened social inequality. Hacienderos (wealthy landowners) often forced farmers into exploitative arrangements, such as the pacto de retroventa, which allowed landowners to buy back land they sold—but in practice, this led many farmers into unpayable debts. Many Filipinos lost their lands and became tenant farmers (kasama) or inquilinos, who worked the land without pay in exchange for temporary access to farmland. Land grabbing and unfair labor practices deepened poverty among rural Filipinos, even as the national economy expanded.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+In summary, while the Philippines experienced economic growth and integration into the global market due to the Industrial Revolution and global trade, the benefits were unequally distributed. The colonial and landed elite gained wealth and power, while the majority of Filipinos faced deepening economic hardship and social injustice.
+</p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Religious Influence -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Religious Influence & Friars</h3>
+                                <p>The powerful role of the Catholic Church and religious orders</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <img src="images/frailes-de-filipinas.jpg" 
+                                         alt="Frailes De Filipinas" 
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.375rem;"
+                                         crossorigin="anonymous">
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                      Frailes De Filipinas
+                                    </p>
+                                </div>
+                                 <div class="photo-placeholder">
+                                    <img src="images/e06b0c86ea6db6b5f8b41696c08f49c7.png" 
+                                         alt="Lesson" 
+                                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.375rem;"
+                                         crossorigin="anonymous">
+                                    <p style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(146, 64, 14, 0.7); color: #fef3c7; padding: 0.5rem; margin: 0; font-size: 0.875rem; text-align: center;">
+                                      c.National Library of Spain
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                          <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Spanish colonization of the Philippines was heavily influenced by religion, with Catholicism acting as a means of colonial control as well as a means of spiritual conversion. Among the first to enter the archipelago were Spanish friars who belonged to influential religious orders such as the Franciscans, Dominicans, Augustinians, and Jesuits. These friars had a great deal of power over both civil and spiritual issues, and they were more than just missionaries; they were de facto rulers in many towns and provinces. They collected taxes, managed local parishes, maintained birth and death records, controlled education, and even meddled in political decisions.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+They often lived in <strong>conventos</strong> or church complexes that served as centers of power in local communities. The friars imposed strict religious practices, replacing native beliefs and rituals with Christian teachings, and introduced forced conversions to align the population with Catholic doctrine. While churches and religious schools were built, giving some access to education, these were primarily designed to serve colonial interests and reinforce obedience to Spain.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Over time, resentment grew among Filipinos, especially among the educated <strong>ilustrados</strong>, who began to question the friars' abuse of power and their resistance to <em>secularization</em>—transferring parishes from Spanish friars to Filipino priests. This demand for equality and religious reform became one of the key causes of Filipino nationalism and helped spark revolutionary ideas that would eventually lead to movements for independence. Thus, while religion unified many Filipinos under a single faith, it also became a source of conflict and resistance in the struggle against colonial oppression.
+</p>
+
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education System -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Education & Intellectual Climate</h3>
+                                <p>The state of education and intellectual development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                        <div class="photo-icon">
+                                            <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                            </svg>
+                                        </div>
+                                        <p><strong>Historical Photo/Map</strong></p>
+                                        <p><em>19th Century Philippines</em></p>
+                                    </div>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                        <div class="photo-icon">
+                                            <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10"/>
+                                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                            </svg>
+                                        </div>
+                                        <p><strong>Period Illustration</strong></p>
+                                        <p><em>Colonial Era Depiction</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+During the Spanish colonial period, education in the Philippines was primarily religious and designed to support the goals of colonization. Early on, formal education was limited, and access was mostly granted to the children of Spanish officials, the principalia, and mestizos. Schools were run by religious orders, and the curriculum was centered on Catholic doctrine, basic reading, writing, and arithmetic, usually taught in Spanish or Latin. Friars controlled most of the schools, making sure that what was taught aligned with the teachings of the Catholic Church and the interests of Spain. Filipino students were generally not encouraged to think critically or question authority. However, as time progressed, more educational institutions were established, including the University of Santo Tomas (1611) and Ateneo Municipal de Manila, where some native and mestizo Filipinos gained access to higher learning.
+</p>
+                           <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+The Education Decree of 1863 was a landmark law enacted by the Spanish colonial government in the Philippines to reform the education system. It aimed to provide free, compulsory primary education for both boys and girls in every town, marking the first attempt to establish a more structured and accessible public school system in the country. The decree also established a normal school in Manila to train Filipino teachers and placed education under the supervision of the government instead of the Church.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Despite its progressive vision, the decree had major defects:
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+<strong>Religious Control and Indoctrination</strong> – Although the decree aimed for state supervision, many schools, especially in rural areas, remained under the tight control of Spanish friars. Education was used to promote blind obedience to religious authority, especially to the friars who were seen as representatives of God and the Spanish Crown. Indios were constantly reminded of their supposed inferiority, and the idea was instilled that their purpose was to serve the colonizers through manual labor and unquestioning loyalty, not to rise intellectually or socially.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+<strong>Absence of Academic Freedom</strong> – Teachers and students were not encouraged to think critically or explore ideas outside Catholic teachings. Independent thought was often discouraged or punished, limiting intellectual growth.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+<strong>Racial Discrimination</strong> – Access to quality education was skewed in favor of the mestizos and children of the principalia, while most native Filipinos (indios) received substandard instruction or were excluded altogether.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+<strong>Limited Curriculum</strong> – The curriculum was narrow, focused mainly on religion, reading, writing, and arithmetic, with taught in Spanish or Latin—languages that many Filipino students did not understand—thereby restricting their ability to learn and engage deeply with the material.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Nevertheless, the decree indirectly contributed to the rise of an educated Filipino class. Over time, children of the principalia, mestizos, and later ilustrados gained access to formal education and pursued higher studies in institutions like the University of Santo Tomas and Ateneo Municipal de Manila. Some wealthy families sent their children abroad to study in Spain and other parts of Europe, where they encountered Enlightenment philosophies, liberal political thought, and modern science. These overseas scholars formed the <em>ilustrado</em> class, who became the intellectual backbone of the Propaganda Movement, calling for reforms such as representation in the Spanish Cortes, secularization of parishes, and freedom of speech and press. Key figures like José Rizal, Marcelo H. del Pilar, and Graciano López Jaena used their education to advocate for the rights of Filipinos and to expose the abuses of the friars and colonial system. Thus, while the Education Decree of 1863 had limitations, it marked the beginning of a new intellectual climate in the Philippines that would eventually fuel the nationalist movement and awaken a collective Filipino consciousness.
+</p>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reform Movements -->
+               
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="navigation">
+        <div class="container">
+            <div class="nav-content">
+                <a href="rizal-law.html" class="btn btn-outline">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"/>
+                        <path d="M12 19l-7-7 7-7"/>
+                    </svg>
+                    Previous: Rizal Law
+                </a>
+                <a href="early-life.html" class="btn btn-primary">
+                    Next: Early Life
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"/>
+                        <path d="M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.section-card, .overview-text, .overview-image, .stat-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add hover effects to section cards
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

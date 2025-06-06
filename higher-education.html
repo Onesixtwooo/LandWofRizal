@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal's Life: Higher Education and Life Abroad - Life and Works of Rizal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 50%, #d4c4a0 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23d4af8c' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid rgba(146, 64, 14, 0.3);
+            background: rgba(254, 252, 232, 0.9);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #a16207;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #fef3c7;
+        }
+
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid #fbbf24;
+            font-size: 0.875rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 3rem 0 4rem;
+            position: relative;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            border: 4px solid rgba(146, 64, 14, 0.3);
+        }
+
+        .hero::before {
+            top: 2rem;
+            left: 2rem;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .hero::after {
+            top: 2rem;
+            right: 2rem;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #f97316;
+            margin: 0 auto 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #a16207;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .decorative-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line {
+            width: 6rem;
+            height: 0.25rem;
+            background: #b45309;
+        }
+
+        .diamond {
+            width: 1rem;
+            height: 1rem;
+            background: #b45309;
+            transform: rotate(45deg);
+            margin: 0 0.5rem;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 4rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .section-card {
+            border: 2px solid #fbbf24;
+            background: rgba(254, 252, 232, 0.9);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .section-header {
+            padding: 1.5rem;
+        }
+
+        .section-icon-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-icon {
+            width: 3rem;
+            height: 3rem;
+            background: #ea580c;
+            border-radius: 50%;
+            color: #fed7aa;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #f97316;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-info h3 {
+            font-size: 1.5rem;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-info p {
+            color: #b45309;
+        }
+
+        .section-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .photo-section {
+            background: rgba(254, 243, 199, 0.5);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #fbbf24;
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .photo-placeholder {
+            background: #fef3c7;
+            border: 2px solid #fbbf24;
+            border-radius: 0.5rem;
+          
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+.image {
+           
+           
+            border-radius: 0.5rem;
+            
+            max-height:300px;
+           
+        }
+        .photo-content {
+            color: #b45309;
+        }
+
+        .photo-icon {
+            width: 4rem;
+            height: 4rem;
+            background: #fed7aa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem;
+        }
+
+        .content-section {
+            background: rgba(254, 243, 199, 0.5);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #fbbf24;
+        }
+
+        .content-text {
+            color: #a16207;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .content-divider {
+            border-top: 1px solid #fbbf24;
+            padding-top: 1rem;
+        }
+
+        .content-title {
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-list {
+            color: #a16207;
+            font-size: 0.875rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Navigation */
+        .navigation {
+            padding: 3rem 0;
+            background: rgba(254, 252, 232, 0.5);
+            border-top: 2px solid #fbbf24;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-outline {
+            border: 2px solid #b45309;
+            color: #a16207;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #fef3c7;
+        }
+
+        .btn-primary {
+            background: #b45309;
+            color: #fef3c7;
+            border-color: #d97706;
+        }
+
+        .btn-primary:hover {
+            background: #92400e;
+        }
+
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+        }
+
+        .icon-lg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"/>
+                        <path d="M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Home
+                </a>
+                <div class="badge">Module 4</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="10" r="3"/>
+                        <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/>
+                    </svg>
+                </div>
+                <h1 class="hero-title">Rizal's Life: Higher Education and Life Abroad</h1>
+                <p class="hero-description">
+                    Following José Rizal's transformative journey through higher education and his enlightening years in
+                    Europe
+                </p>
+                <div class="decorative-line">
+                    <div class="line"></div>
+                    <div class="diamond"></div>
+                    <div class="line"></div>
+                </div>
+<br>
+                <p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+Ateneo was regarded as the most esteemed university for boys due to its excellent lessons. Between 1872 and 1877, Rizal attended the Ateneo de Manila under the guidance of Jesuit priests. Previously known as Escuela Pia, the school later became known as Ateneo Municipal. When choosing where to send Rizal for formal high school education, his father decided not to pursue Letran and instead enrolled him at Ateneo.
+</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content">
+        <div class="container">
+            <div class="content-grid">
+
+                   <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="10" r="3"/>
+                                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>At Ateneo de Manila</h3>
+                                <p>José's university years in Manila </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                        <img src="images/education-in-the-philippines-jose-rizal-in-ateneo.jpg" class="image" >
+                                           <p><strong>Ateneo de Manila in 1800s</strong></p>
+                                    </div>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                        <img src="images/14514875551_306df23699.jpg" class="image">
+                                         <p><strong>Scenes at the secondary school Ateneo Municipal de Manila</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                          <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal initially took the entrance exam at the Colegio de San Juan de Letran on June 10, 1872. Paciano, his brother, was with him during the exam. At that time, freshmen entrance exams for various universities were administered at Letran because the Dominicans had the authority to inspect and regulate Ateneo. Rizal passed the test and was accepted to the Ateneo.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Despite passing the exam, Rizal was initially denied admission by Father Magin Ferrand, the College Registrar, for two reasons: he registered late, and he appeared too thin, pale, and small for an eleven-year-old. However, with the help of Manuel Burgos, he was eventually accepted. Upon enrollment, he could not use the surname Mercado because it had become sensitive to authorities due to Paciano's association with Father Burgos and the secularization movement. Thus, he was registered as Jose Rizal.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Father Jose Bech was Rizal’s first instructor. Although initially overlooked by his classmates, Rizal dedicated himself to his studies and created a personal schedule. His hard work paid off, and he earned the title “emperor” of the class, awarded to the brightest student. Ateneo used the ration studiorum, a Jesuit system of indoctrination that emphasized strict discipline alongside academic rewards.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal graduated with the highest academic honors in his Bachelor of Arts degree. His records reveal excellent performance throughout his Ateneo years. The isolation of boarding school, pride, and strict discipline pushed him to excel. He wanted to prove that Filipinos could academically compete with, and even surpass, their Spanish classmates. The classroom competitions allowed him to outshine his peers through daily academic tasks that tested knowledge and comprehension.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal received individual instruction at Santa Isabel College to become fluent in Spanish and to further cultivate his ability to write poetry. However, before officially enrolling in classes, he was guided in developing his poetic skills under the direction of Father Francisco Paula de Sanchez. Through this mentorship, he was able to compose poems that reflected his childhood experiences, education, and religious beliefs. This also gave him the opportunity to nurture his sense of patriotism, maturity, and emotional sensitivity.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+During his lifetime, Rizal wasted no time in learning new things. In his spare time, Rizal studied sculpture and painting under Agustin Saez and from Teodoro Romualdo de Jesus in order to stimulate his artistic curiosity. Consequently, he was able to carve the Sacred Heart of Jesus and the picture of the Virgin Mary. Father Jose Villaclara, S.J. urged him to focus on the sciences as well as philosophy.
+</p>
+
+                        </div>
+                        <br>
+                         <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                       
+                                        <p><strong>Mi Primera
+Inspiracion (My First Inspiration)</strong></p>
+                                        <p><em>He dedicated this poem to his mother during her
+ birthday, while some claim that this was his cousin's creation.</em></p><br>
+ <p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+Why do the scented flowers in fragrant fray<br>
+Rival each other’s flower this festive day?
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+Why is the sweet melody bruited in the sylvan dale,<br>
+Harmony sweet and fluted like the nightingale?
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+Why do the birds sing so in the tender grass,<br>
+Flitting from bough to bough with winds that pass?
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+And why does the crystal spring run among the flowers<br>
+While lullaby zephyrs sing like its crystal showers?
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+I see the dawn in the East with the beauty endowed<br>
+Why goes she to a feast in a carmine cloud?
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+Sweet mother, they celebrate your natal day<br>
+The rose with her scent innate, the bird with his lay.
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+The murmurous spring this day without alloy.<br>
+Murmuring bids you always to live in joy.
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+While the crystalline murmurs glisten, hear you the accents strong<br>
+Struck from my lyre, listen! To my love’s first song.
+</p>
+
+                                    </div>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <div class="photo-content"><br><br><br>
+                                        <p><strong> Un
+Recuerdo de Mi Pueblo (In Memory of My Town)</strong></p>
+                                        <p><em>This poem was his
+way of giving tribute to his hometown, Calamba</em></p><br>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+When I recall the days, that my boyhood saw<br>
+By the green banks of a murmuring lagoon;<br>
+When I recall the murmur of the wind<br>
+That sweetly amused by brow with delicious freshness;
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+I recall, sadly recall your countenance, infancy precious<br>
+That a loving mother Oh! Succeeded in embellishing<br>
+I recall a simple town, my contentment, happiness and cradle, by the fresh lagoon, seat my love.<br>
+The Creator I saw in the grandeur of your secular forests;
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+Sorrows on your bosom, never did I come to know;<br>
+While at your blue sky I gazed, neither love nor tenderness<br>
+Did I lack, for in Nature my pleasure depended.<br>
+Tender childhood, beautiful town, rich fountain of happiness
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+Of harmonious melodies that banish sorrows!<br>
+Return to my heart, return my gentle hours<br>
+Return as the birds return when flowers are in bloom!<br>
+But alas! Adieu! Eternally keep vigil over your peace, joy and
+</p>
+
+<p style="color: #a16207; text-align: center; margin-bottom: 1rem; line-height: 1.6;">
+Repose, Genie of goodness who kindly his gifts presents with love;<br>
+For you my fervent wishes, for you my constant yearning<br>
+To learn and to heaven I pray that you your candor keep.<br>
+&nbsp;
+</p>
+
+                                    </div>
+                                  
+                                </div>
+                             
+
+                            </div><br>
+                             <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal's introduction to the Atenean educational system served as his means of writing more poetry on education and religion. Notable poems included: <em>Al Niño Jesus</em> (To the Child Jesus), which expressed Rizal's fervent commitment to Catholicism; <em>The Intimate Alliance Between Religion and Good Education</em>; and <em>For Education to Be Recognised, Patria</em> (Education Brings Light to the Nation), which displays Rizal's numerous concepts related to education.
+</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- University of Santo Tomas -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="10" r="3"/>
+                                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>University of Santo Tomas</h3>
+                                <p>José's university years in Manila studying Philosophy and Medicine</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                        <img src="images/CXd_vHiUoAA7KTu-1.jpg">
+                                        <p><strong>University Photos</strong></p>
+                                        <p><em>University of Santo Tomas</em></p>
+                                    </div>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                        <img src="images/Library_University_of_Santo_Tomas_Manila_Philippines.jpg">
+                                        <p><strong>UST Library</strong></p>
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                           <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+At the beginning, Rizal was not sure of what course to take after graduation. His former mentors in Ateneo suggested priesthood or farming, but Rizal considered taking up literature, law or medicine. Paciano, his brother, discouraged him to take law, saying that Rizal will not be able to practice it later on because of the political conditions in the country that time. Rizal was 16 years old when he began his freshman year at UST. He enrolled under the Faculty of Philosophy and Letters, Major in Philosophy. This was the course that his father wanted him to pursue, but then it turned out that he took up courses in Cosmology, Metaphysics, Theodicy and History of Philosophy.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+He also took up surveying course at Ateneo. Once again, he excelled in the said course while underage. But because of this, he could not practice the surveyor’s profession yet. Instead, Rizal was presented the title on November 25, 1881 for his excellency. After his first year, Rizal changed his course from Philosophy and Letters to Medicine. Rizal believed that he should finish medicine so that he could cure his sick mother who had an eyesight failure.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal’s performance in UST was not as good as his accomplishment in Ateneo, where he excelled in all his subjects. On the contrary, some of Rizal’s grades in UST were still excellent but he had lower grades in other subjects. This might have been because Rizal was not actually happy while in UST. Three contributing factors explain this: The attitude of Dominican professors towards Rizal; there was racial discrimination against Filipino students; and he was disgusted at the primitive method used in UST.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+It was manifested in Rizal’s scholastic records that he was not into a medical course. Most of his grades in his medical subjects were generally average, his real vocation was really in the arts. Rizal’s not-so-good performance can also be attributed to a number of distractions he experienced as a youth in Manila, specifically his interest in women when he was a UST student. The first woman he was into was Segundina Katigbak of Batangas, whom he frequently visited in her boarding house. But when Rizal learned that she was getting married, he turned his eyes on other women. At that time, he was courting both Leonor (Orang) Valenzuela and Leonor Rivera.
+</p>
+
+<h4 style="color: #a16207; margin-bottom: 0.5rem;">As a Activist</h4>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal stood as a leader in student activism when he was studying philosophy and medicine in UST. The Spanish and mestizo students called the Filipinos indio or chongo. In return, Rizal and his peers retaliated by calling them Kastila or bangus. As a result, student fights in the university campus and even in the streets of Manila became common. Rizal, being the front-runner, was recognized for winning the brawls because of his determination and skills in fencing and wrestling. In fact, there was also a time that Rizal was wounded due to a fight with the Spanish students of Escolta, Manila.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal then created a secret group of Filipino students called “Compañerismo.” The members were called Companions of Jehu, the patriot general of the Jews. Rizal automatically became the president of this secret society and Galiciano Apacible was the secretary. Rizal’s activism was also expressed in his disapproval of the faulty and outmoded system of education in the university during his time.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+He condemned the humiliation of brown Filipino students, who were most of the time insulted by their Dominican mentors. He also criticized the archaic method of instruction at UST. He ridiculously described the teaching of Physics devoid of laboratory experiments. Students were not allowed to touch the laboratory apparatus and equipment that is why they were always kept inside the display cabinets.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Besides, favoritism and skin color were bases for getting the good grades and not the actual intellectual capacity of the students.
+</p>
+
+<h4 style="color: #a16207; margin-bottom: 0.5rem;">EXPERIENCING SPANISH BRUTALITY</h4>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal first experienced Spanish brutality during his first summer vacation at Calamba after his freshman year in UST. While walking past the streets, he did not notice the man passing by because of the darkness of the night. This man happened to be a lieutenant of the Guardia Civil. But since Rizal did not pay respect to the lieutenant by saluting or greeting him, the lieutenant whipped him with his sword and slashed it at Rizal’s back causing him to be wounded. Of course, everybody was expected to bow down for the Guardia Civil during that time. Consequently, Rizal wrote a complaint letter to Governor-General Primo de Rivera but the response, as foreseen, was nothing as good, considering that he was an indio. The incident left Rizal a bad impression of the unfair and unjust acts of the Spaniards towards the Filipinos.
+</p>
+
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journey to Europe -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Journey to Europe</h3>
+                                <p>The decision to study abroad and the voyage to Spain</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                        
+                                        <p><strong>University Photos</strong></p>
+                             
+                                    </div>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                        <div class="photo-icon">
+                                            <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                                            </svg>
+                                        </div>
+                                        <p><strong>European Journey</strong></p>
+                                        <p><em>Cities & Landmarks</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <h4 style="color: #a16207; margin-bottom: 0.5rem;">Barcelona</h4>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal did not continue his studies in the Philippines, instead, he went to Europe to widen his learning and to acquire knowledge about a cure for his mother’s worsening eye condition. He left Calamba on May 1, 1882 and was able to reach Manila in ten hours. He left Manila on May 3, 1882, with his brother Paciano and Uncle Antonio Rivera’s blessing. He decided to go abroad after completing his fourth year in the medical course. But he did not seek his parents’ permission because clearly, they will not approve of Rizal’s plan. Bringing with him his disappointments during his days as a student, he left the Philippines for Europe.
+</p>
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Paciano did everything to make sure that Rizal could leave the country secretly to avoid detection by Spanish authorities, especially by the friars. He was the one who secured Rizal’s passport using the name Jose Mercado and arranged the necessary endorsements from Pedro Paterno. From Manila, Rizal boarded the steamer <em>Salvadora</em> and sailed to Singapore. He stayed there for two days and visited the botanical garden, art galleries, parks, and some historical places.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+After Singapore, Rizal boarded the ship <em>Djemnah</em>, which passed through Colombo in Sri Lanka, Aden in Yemen, and the Suez Canal until it landed at Port Said. The ship reached Naples in Italy on June 11, 1882. From there, the steamer stopped at the harbor of Marseilles, and Rizal then took a train to Barcelona, Spain, arriving in the city on June 16, 1882.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Upon his arrival, Rizal noticed the freedom and liberalism practiced by the community. He came to admire the hospitality, open-heartedness, and courage shown by the people. His fellow Filipinos—most of them former schoolmates from Ateneo Municipal—welcomed him with a celebration at Plaza de Cataluna.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Rizal roamed around the city and visited historical spots. Not forgetting his loved ones, he made sure to write letters to his family, relatives, and friends. One of Rizal’s missions during this trip was to make a name for himself through his writings and express his love for his country.
+</p>
+
+<p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+At the age of 21, his first published piece was the essay entitled <em>El Amor Patrio</em> or <em>Love of Country</em>. While writing this, he used the pen name <em>Laong Laan</em>. It was published in the <em>Diariong Tagalog</em> in Manila on August 20, 1882.
+</p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Studies in Madrid -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Studies in Madrid</h3>
+                                <p>Medical studies at Universidad Central de Madrid</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                       
+                                       <img src="images/1_jxlhejZWFE_GMMcJDE1usw.jpg" style="max-height:300px; max-width:400px;"> 
+                                    </div>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                       
+                                       <img src="images/image-asset.jpeg" style="max-height:300px; width:300px;"> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                            <p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+On September 1882, Rizal moved to the capital city of Spain to continue his studies. Rizal enrolled at the Universidad Central de Madrid on November 3, 1882. He took up Philosophy and Letters and Medicine. While studying at the university, he also enrolled at the Academy of San Carlos taking up painting and sculpture, and languages in French, German, and English. He also took up shooting and fencing at the Hall of Sanz and Carbonell. Additionally, he showed great interest in taking the examination in Roman law.
+</p>
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal passed the medical examination which he took from June 5 to 26. He was given the degree of Licentiate in Medicine for this and continued his doctorate degree in medicine. However, he was not able to accomplish the diploma because he failed to present the thesis required for graduation. He was allowed to practice medicine but could not teach medicine. Rizal was saddened by this decision and thought that the education system in Madrid had no difference with that in Manila. He then finished his course in Philosophy and Letters and gained the degree Licenciado en Filosofía y Letras. During this time, Rizal was halfway done with his novel, the Noli Me Tangere.
+</p>
+
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- European Travels -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>European Travels & Experiences</h3>
+                                <p>Travels across Europe and exposure to different cultures</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                       
+                        <div class="content-section">
+                             <h4 style="color: #a16207; margin-bottom: 0.5rem;">Paris</h4>
+                           <p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal arrived in Paris on November 1885. At that time, he was 24 years old and a full-pledged surgeon. He decided to migrate to Paris to specialize in Ophthalmology, but prior to doing so, he went to visit Maximo Viola, a friend from San Miguel, Bulacan.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal also worked as an assistant to Dr. Louis de Weckert’s eye clinic for four months. During his stay, Rizal knew how to conduct the operation of the eye, its ailments, and the different techniques of eye operation. He spent his past time with his fellow Filipinos in the city, something that contributed much to learning how to speak French fluently.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+His friends were Felix Hidalgo, Juan Luna and Pardo de Tavera. For the duration of his stay with Juan Luna, Rizal became a model and posed for two historical paintings of Luna: The Blood Compact (as Sikatuna) and Death of Cleopatra (as a Priest).
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+It was also in Paris that he finished some part of his Noli.
+</p>
+
+ <h4 style="color: #a16207; margin-bottom: 0.5rem;">Germany</h4>
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Due to the high cost of living in Paris, José Rizal moved to Heidelberg, Germany, in February 1886, where he worked as an assistant to Dr. Otto Becker at the University Eye Hospital. There, he learned advanced techniques in ophthalmology and befriended German law students, joining their chess and social drinking clubs. Rizal wrote letters to his sisters praising German virtues and composed the poem <em>A Las Flores de Heidelberg</em> expressing his homesickness.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+During the summer, Rizal vacationed in Wilhelmsfeld with Pastor Karl Ulmer's family, who admired him for his talents and character. In July 1886, Rizal began corresponding with Professor Ferdinand Blumentritt, exchanging books and ideas.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal then traveled to Leipzig, meeting notable scholars and translating literary works into Tagalog for his relatives. After brief stays in Dresden and Berlin, he furthered his studies in ophthalmology and sciences, joined multiple scholarly societies, and continued writing his novel <em>Noli Me Tangere</em>. Despite financial struggles and illness, he remained dedicated to his studies and writing.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal toured several European cities with Viola in 1887, including Prague, Vienna, Munich, and Geneva, visiting historical sites and cultural landmarks. In Geneva, he received distressing news about the mistreatment of Igorot natives displayed at an exposition, which deeply angered him. After 15 days, Rizal and Viola parted ways, with Rizal continuing to Italy.
+</p>
+
+ 
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Return to Calamba -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14,2 14,8 20,8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                    <polyline points="10,9 9,9 8,9"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Return to Manila</h3>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                     
+                        <div class="content-section">
+                           <p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+After spending five years abroad, José Rizal left Rome on July 3, 1887, traveling through France, Vietnam, and finally arriving in Manila on August 5, 1887. He stayed briefly in Manila but was unable to meet Isabelo de los Reyes. Rizal visited Ateneo, where Jesuits tried to persuade him to return to the Catholic faith, but he stood firm on the truth of his novel <em>Noli Me Tangere</em> despite criticism from Padre Faura.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Upon arriving in his hometown Calamba on August 8, Rizal faced rumors accusing him of being a German spy and a Mason, resulting in daily death threats. His family became protective, with his brother Paciano accompanying him outdoors. Despite this, Rizal opened a medical clinic, gaining a reputation as an eye specialist after successfully treating his mother’s cataracts. Locals called him “Doctor Uliman,” mistaking him for a German.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+On August 30, Rizal met Governor-General Emilio Terrero, who found nothing wrong with <em>Noli Me Tangere</em>, though the Archbishop recommended banning the book. Rizal was given protection by the government but refused to leave the country despite pressure.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal also led an investigation into agrarian issues involving the Dominican-owned hacienda in Calamba. He reported abuses such as excessive rents, confiscation of tenant property, and unjust dispossession of lands, angering the friars. In retaliation, the friars demanded Rizal’s deportation and forced tenants, including Rizal’s family, to leave the hacienda.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Governor-General Terrero was eventually replaced by Lieutenant General Valeriano Weyler, who supported the friars’ influence. Tenant protests in Manila led by Doroteo Cortes called for the removal of friars, with some demonstrators arrested.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal’s brother-in-law Mariano Herbosa was denied a Christian burial due to his marriage to Rizal’s sister Lucia. Rizal responded by writing an essay, <em>A Profanation</em>, condemning the church’s decision. After the tenant conflict, several of Rizal’s family members were exiled to other parts of the Philippines, causing Rizal great sorrow.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Before leaving Calamba on February 3, 1888, Rizal wrote the poem <em>Himno al Trabajo</em> (Hymn to Labor), praising hard work as the lifeblood and strength of the nation.
+</p>
+
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intellectual Development -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Exile of Rizal</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                       <img src="images/Ophthalmologist_Business_Card_of_Doctor_Jose_Rizal_from_Hong_Kong_End_of_19_Century.jpg" style="max-height:300px; max-width:400px;">
+                                        <br><p><strong>Ophthalmologist Business Card of Doctor Jose Rizal from Hong Kong</strong></p>
+                                      
+                                    </div>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                        <img src="images/seiko.jpg" style="max-height:300px; max-width:400px;">
+                                           <p><strong>Seiko Usui or O-Sei-san: Jose Rizal's Japanese Girlfriend</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-section">
+                             <h4 style="color: #a16207; margin-bottom: 0.5rem;">Hong Kong</h4>
+                          <p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal arrived in Hong Kong on February 8, 1888. His fellow Filipinos, namely Jose Maria Basa, Balbino Mauricio, and Manuel Yriarte, who were all exiled in 1872, met Rizal. In Hong Kong, he was able to study the Chinese language, Chinese drama and theater, Chinese cultures, and Chinese values. Rizal even became friends with some Spaniards that were based in Hong Kong.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+He met Barranda, Terrero’s secretary, together with other Spaniards and went to visit Macao, a Portuguese colony near Hong Kong. Rizal and his friends visited the botanical garden, theatre, casino, cathedral and churches, pagodas, and bazaars. They lived in the house of Juan Lecaroz and on February 20, 1888, he went back to Hong Kong. Two days after, he left for Japan on board the SS Oceania on February 22, 1888.
+</p>
+ <h4 style="color: #a16207; margin-bottom: 0.5rem;">Japan</h4>
+ <p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal arrived in Yokohama, Japan and stayed at Tokyo Hotel on February 28, 1888 for a few days. He was then invited by Juan Perez Caballero to live at the Spanish Legation for a month. On March 7, 1888, he left the hotel and lived at the Spanish legation. During his stay in Japan, he studied the Japanese language or Nippongo, Japanese culture, theatres, martial arts and visited Japanese provinces. Rizal appreciated the cleanliness, politeness, and industry of the Japanese.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal then met O-Sei-San and their romance began when he lived at the Spanish legation. They became friends and later on developed to become lovers. O-Sei-San, or Seiko Usui, and Rizal fell in love with each other. Because of this, Rizal thought of staying in Japan for good. Nonetheless, Rizal had duties to fulfill for his country. So he decided to leave Japan and said his goodbyes to O-Sei-San.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+<strong>TRIP TO UNITED STATES OF AMERICA</strong><br>
+Aboard a steamer on April 28, 1888, the entire boat was quarantined when it stopped in San Francisco because, accordingly, the ship came from a country where cholera was epidemic. Rizal knew that this was not the fact — he found out that the ship was halted for the Chinese and Japanese laborers who accepted cheap labor, replacing the American laborers.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+On May 4, 1888, after a week of the quarantine, some passengers were allowed to disembark, except for the Japanese and Chinese passengers who were quarantined for a longer period. Rizal went to different cities in America like Reno, Utah, Colorado, Nebraska, Chicago, Albany, and New York City. He was very much impressed with all the cities for their natural beauty, the hardworking Americans, the material progress and the high standard of living, and the opportunities offered for poor immigrants for a better life.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6;">
+The negative impressions included the lack of racial equality and the presence of racial prejudice against other nations. The Americans valued money more than human life and fairness and justice were only offered to white people.
+</p>
+<br>
+  <h4 style="color: #a16207; margin-bottom: 0.5rem;">London</h4>
+  <p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+After leaving New York City on May 16, 1888, José Rizal arrived in Liverpool, England, on May 24 and soon moved to London. He stayed with Dr. Antonio Ma. Regidor, an exiled Filipino lawyer. Rizal chose London to improve his English, research Philippine history—especially Antonio Morga’s <em>Sucesos de las Islas Filipinas</em>—and continue writing for <em>La Solidaridad</em>, defending Filipinos against Spanish oppression.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+In London, Rizal met Dr. Reinhold Rost, librarian of the British Ministry of Foreign Affairs, who helped him access the British Museum for research and encouraged him to publish articles in the Asian Studies Journal. Rizal also boarded with the Beckett family.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+During this period, Rizal received troubling news from the Philippines: persecution of those who signed the Anti-Friar Petition, tenant abuses in Calamba, exile of his brother-in-law Manuel T. Hidalgo, attacks from Spanish senators, and the arrest of his friend Laureano Vida for owning <em>Noli Me Tangere</em>. However, there was also positive news that Rev. Vicente Garcia defended <em>Noli Me Tangere</em> against the friars.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+In September 1888, Rizal went to Paris to continue his historical research at the National Library, staying with Valentin Ventura. He studied French and tutored students while preparing an annotated version of Morga’s work.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+At Christmas 1888, Rizal stayed with the Beckett family again and became fond of Gertrude Beckett (“Tottie” or “Sissie”), though he restrained his feelings when he realized she was falling for him. Rizal also connected with Filipino painter Juan Luna and his wife in London.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+In December 1888, Rizal visited Madrid and Barcelona, meeting Propaganda Movement leaders Marcelo H. del Pilar and Mariano Ponce. Despite being abroad, Rizal was named Honorary President of Asociacion La Solidaridad in Barcelona, a group pushing for Filipino reforms.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+The Propaganda Movement’s goals included:
+</p>
+
+<ul style="color: #a16207; margin-left: 2rem; margin-bottom: 1rem;">
+  <li>Making the Philippines a Spanish province to secure equal rights for Filipinos,</li>
+  <li>Securing Filipino representation in the Spanish Cortes (parliament),</li>
+  <li>Achieving secularization of parishes.</li>
+</ul>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal actively contributed articles and essays to <em>La Solidaridad</em>. He translated Marcelo del Pilar’s letter to The Women of Malolos into Tagalog in 1889.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+He also founded societies to promote Filipino intellectual and physical excellence:
+</p>
+
+<ul style="color: #a16207; margin-left: 2rem; margin-bottom: 1rem;">
+  <li>The Kidlat Club and Indios Bravos (March 1889), and</li>
+  <li>R.D.L.M. (Redención de los Malayos) in Paris (1890), which aimed to increase knowledge among Filipinos.</li>
+</ul>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Among his notable writings during this period were <em>Filipinas Dentro de Cien Años</em> (“The Philippines a Century Hence”) and <em>Sobre la Indolencia de los Filipinos</em> (“On the Indolence of the Filipinos”). In Paris, he published <em>Por Telefono</em> under the pseudonym Dimas Alang, defending <em>Noli Me Tangere</em> from attacks by Spanish friar Fr. Salvacion Font.
+</p>
+
+   <h4 style="color: #a16207; margin-bottom: 0.5rem;">Brussels, Belgium</h4>
+
+   <p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+On January 28, 1890, José Rizal left Paris for Brussels, Belgium, accompanied by Jose Alberto. When Jose Alberto left, another student, Jose Alejandro, stayed with him at the boarding house run by Suzanne and Marie Jacoby.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal found Paris’s cost of living too high and the social life distracting from his writing, which slowed progress on his second novel, <em>El Filibusterismo</em>. Nevertheless, he continued contributing articles to <em>La Solidaridad</em>, including:
+</p>
+
+<ul style="color: #a16207; margin-left: 2rem; margin-bottom: 1rem;">
+  <li><em>A La Defensa</em> (April 30, 1889) — a reply to anti-Filipino writings by Patricio de la Escorura</li>
+  <li><em>La Verdad Para Todos</em> (May 31, 1889) — defending Filipino officials from Spanish accusations</li>
+  <li><em>Vicente Barrantes’ Teatro Tagalo</em> (June 15, 1889) — criticizing Barrantes’s ignorance of Tagalog theater</li>
+  <li><em>Una Profanacion</em> (July 31, 1889) — condemning friars for denying Christian burial to Rizal’s brother-in-law Mariano Herbosa</li>
+  <li><em>Crueldad</em> (July 31, 1889) — defending Blumentritt from attacks</li>
+  <li><em>Verdades Nuevas</em> (August 15, 1889) — opposing Vicente Belloc Sanchez’s letter threatening reforms</li>
+  <li><em>Diferencias</em> (September 15, 1889) — replying to insults against Filipinos protesting for reforms</li>
+  <li><em>Inconsequencias</em> (November 30, 1889) — defending Antonio Luna from criticism</li>
+  <li><em>Llanto y Risas</em> (November 30, 1889) — confronting Spanish racial prejudice</li>
+  <li><em>Ingratitudes</em> (January 15, 1890) — replying to Governor-General Weyler’s accusations against Calamba tenants</li>
+</ul>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+To support himself in Brussels, Rizal practiced as a surgeon. He spent considerable time writing <em>El Filibusterismo</em> and <em>La Solidaridad</em> articles. Concerned about the gambling habits of Filipinos in Spain, he wrote to Marcelo H. del Pilar urging Filipinos to focus on their country’s freedom.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal was deeply troubled by worsening land disputes in Calamba. The Dominican friars raised rents, causing tenants—including Rizal’s family—to refuse payment, leading to eviction cases. The illegal eviction saddened and angered Rizal, inspiring him to write the poem <em>A Mi Musa</em> (To My Muse), published under the pen name Laong Laan in <em>La Solidaridad</em> on December 15, 1890.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Despite his efforts, Rizal failed to reclaim his family’s land rights. While in Madrid, Rizal had heated encounters, including a quarrel with Antonio Luna and a challenge to duel with his rival, Spanish scholar Wenceslao Retana. Rizal sought help from liberal Spanish statesmen but received only sympathy.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+The Asociacion Hispano Filipino was formed in Madrid, led by Dr. Miguel Morayta. A leadership election between Rizal and Marcelo H. del Pilar ended with Rizal winning, but he declined the position to avoid dividing the Filipino community.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+In February 1891, Rizal traveled to Biarritz, France, where he stayed with the Boustead family. This respite helped him forget his Madrid troubles. He rekindled his affection for Nelly Boustead during this trip.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal finished writing <em>El Filibusterismo</em> on March 29, 1891, and completed revisions on March 30, 1891, preparing the novel for imminent publication.
+</p>
+<br><br>
+    <h2 style="color: #a16207; margin-bottom: 0.5rem;">Life in Hong Kong before Homecoming again</h2>
+
+    <p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+After publishing <em>El Filibusterismo</em>, José Rizal left Madrid due to political tensions with Marcelo H. del Pilar and other Filipinos in Spain. He also mourned the death of his friend Jose Ma. Panganiban (Jomapa) and wrote a eulogy recognizing Jomapa's contributions as a patriot.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Seeking a more peaceful and purposeful life, Rizal moved to Hong Kong on November 20, 1891. He chose to leave political struggles behind and focus on practicing medicine. He worked with Dr. Lorenzo P. Marquez, received a license, and supported his family, who soon joined him in Hong Kong.
+</p>
+
+<h3 style="color: #a16207;">Writings and Reform Activities</h3>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+While in Hong Kong, Rizal remained active intellectually:
+</p>
+
+<ul style="color: #a16207; margin-left: 2rem; margin-bottom: 1rem;">
+  <li>He translated <em>The Rights of Man</em> into Tagalog as <strong>Ang Mga Karapatan ng Tao</strong>.</li>
+  <li>He wrote:
+    <ul style="margin-left: 1.5rem;">
+      <li><strong>A La Nación Española</strong> – urging Spain to correct its injustices toward Calamba tenants.</li>
+      <li><strong>Sa Mga Kababayan</strong> – his interpretation of the Calamba agrarian dispute.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 style="color: #a16207;">La Liga Filipina</h3>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Rizal began drafting the constitution of <strong>La Liga Filipina</strong> with help from Jose Ma. Basa. The Liga aimed to:
+</p>
+
+<ul style="color: #a16207; margin-left: 2rem; margin-bottom: 1rem;">
+  <li>Unite the Philippines as one body.</li>
+  <li>Provide mutual protection and support.</li>
+  <li>Promote education, agriculture, and commerce.</li>
+  <li>Defend members against injustice and promote reforms.</li>
+</ul>
+
+<p style="color: #a16207; margin-left: 2rem; margin-bottom: 1rem;"><strong>Motto:</strong> <em>Unus Instar Omnium</em> (One Like All)</p>
+
+<p style="color: #a16207; margin-left: 2rem; margin-bottom: 1rem;"><strong>Three Councils:</strong></p>
+<ul style="color: #a16207; margin-left: 3rem; margin-bottom: 1rem;">
+  <li>Popular</li>
+  <li>Provincial</li>
+  <li>Supreme</li>
+</ul>
+
+<p style="color: #a16207; margin-left: 2rem; margin-bottom: 1rem;"><strong>Membership Requirements:</strong></p>
+<ul style="color: #a16207; margin-left: 3rem; margin-bottom: 1rem;">
+  <li>Qualification through tests and council recommendation</li>
+  <li>Monthly contribution to fund:
+    <ul style="margin-left: 1.5rem;">
+      <li>Education of gifted but underprivileged youth</li>
+      <li>Support for struggling members</li>
+      <li>Loans for farming or industry</li>
+      <li>Legal aid</li>
+      <li>Low-priced cooperative stores</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 style="color: #a16207;">Return to the Philippines and Exile</h3>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Before returning to the Philippines, Rizal met with Governor-General Eulogio Despujol regarding his North Borneo colonization project, but received no response.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+Despite warnings and opposition from his family, Rizal returned to Manila on June 26, 1892. He visited friends in Central Luzon and encouraged them to join <strong>La Liga Filipina</strong>.
+</p>
+
+<p style="text-align: justify; color: #a16207; line-height: 1.6; margin-bottom: 1rem;">
+However, just a few days later, on July 6, 1892, Rizal was arrested for allegedly bringing <em>Pobres Frailes</em> (a satirical leaflet criticizing wealthy Dominican friars) from Hong Kong. Though the accusation was false, Rizal was exiled to Dapitan, Mindanao.
+</p>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="navigation">
+        <div class="container">
+            <div class="nav-content">
+                <a href="early-life.html" class="btn btn-outline">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"/>
+                        <path d="M12 19l-7-7 7-7"/>
+                    </svg>
+                    Previous: Early Life
+                </a>
+                <a href="index.html" class="btn btn-primary">
+                    Back to Home
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"/>
+                        <path d="M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.section-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add hover effects to section cards
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

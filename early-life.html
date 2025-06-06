@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal's Life: Family, Childhood, and Early Education - Life and Works of Rizal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 50%, #d4c4a0 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23d4af8c' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid rgba(146, 64, 14, 0.3);
+            background: rgba(254, 252, 232, 0.9);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #a16207;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #fef3c7;
+        }
+
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid #fbbf24;
+            font-size: 0.875rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 3rem 0 4rem;
+            position: relative;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            border: 4px solid rgba(146, 64, 14, 0.3);
+        }
+
+        .hero::before {
+            top: 2rem;
+            left: 2rem;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .hero::after {
+            top: 2rem;
+            right: 2rem;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, #7c3aed, #5b21b6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #8b5cf6;
+            margin: 0 auto 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #a16207;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .decorative-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line {
+            width: 6rem;
+            height: 0.25rem;
+            background: #b45309;
+        }
+
+        .diamond {
+            width: 1rem;
+            height: 1rem;
+            background: #b45309;
+            transform: rotate(45deg);
+            margin: 0 0.5rem;
+        }
+
+        /* Family Tree Section */
+        .family-tree {
+            padding: 4rem 0;
+            background: rgba(254, 252, 232, 0.3);
+            border-top: 2px solid #fbbf24;
+            border-bottom: 2px solid #fbbf24;
+        }
+
+        .family-tree-content {
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .family-tree-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .family-tree-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .family-tree-subtitle {
+            font-size: 1.25rem;
+            color: #a16207;
+            font-style: italic;
+        }
+
+        .family-tree-image {
+            background: rgba(254, 252, 232, 0.8);
+            border: 2px solid #fbbf24;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .family-tree-placeholder {
+            background: #fef3c7;
+            border: 2px dashed #fbbf24;
+            border-radius: 0.5rem;
+            padding: 3rem;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #a16207;
+        }
+
+        .tree-icon {
+            width: 4rem;
+            height: 4rem;
+            background: #ddd6fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .family-members {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .family-members {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .family-section {
+            background: rgba(254, 252, 232, 0.8);
+            border: 2px solid #fbbf24;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .family-section h3 {
+            color: #92400e;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #fbbf24;
+            padding-bottom: 0.5rem;
+        }
+
+        .parent-info {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid #8b5cf6;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .parent-name {
+            font-weight: bold;
+            color: #7c3aed;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .parent-details {
+            color: #a16207;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .siblings-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        @media (min-width: 640px) {
+            .siblings-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .sibling-card {
+            background: rgba(124, 58, 237, 0.05);
+            border: 1px solid #c4b5fd;
+            border-radius: 0.375rem;
+            padding: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .sibling-card:hover {
+            background: rgba(124, 58, 237, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .sibling-name {
+            font-weight: 600;
+            color: #7c3aed;
+            margin-bottom: 0.25rem;
+        }
+
+        .sibling-details {
+            color: #a16207;
+            font-size: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .jose-highlight {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            border: 2px solid #d97706;
+            color: #92400e;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .jose-highlight .sibling-name {
+            color: #92400e;
+            font-size: 0.875rem;
+        }
+
+        .jose-highlight .sibling-details {
+            color: #a16207;
+            font-weight: 500;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 4rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .section-card {
+            border: 2px solid #fbbf24;
+            background: rgba(254, 252, 232, 0.9);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .section-header {
+            padding: 1.5rem;
+        }
+
+        .section-icon-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-icon {
+            width: 3rem;
+            height: 3rem;
+            background: #7c3aed;
+            border-radius: 50%;
+            color: #ede9fe;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #8b5cf6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-info h3 {
+            font-size: 1.5rem;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-info p {
+            color: #b45309;
+        }
+
+        .section-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .photo-section {
+            background: rgba(254, 243, 199, 0.5);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #fbbf24;
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .photo-placeholder {
+            background: #fef3c7;
+            border: 2px solid #fbbf24;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+         
+            text-align: center;
+        }
+
+        .photo-content {
+            color: #b45309;
+            max-width:400px;
+        }
+
+       
+        .photo-icon {
+            width: 4rem;
+            height: 4rem;
+            background: #ddd6fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem;
+        }
+
+        .content-section {
+            background: rgba(254, 243, 199, 0.5);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #fbbf24;
+        }
+
+        .content-text {
+            color: #a16207;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .content-divider {
+            border-top: 1px solid #fbbf24;
+            padding-top: 1rem;
+        }
+
+        .content-title {
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-list {
+            color: #a16207;
+            font-size: 0.875rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Navigation */
+        .navigation {
+            padding: 3rem 0;
+            background: rgba(254, 252, 232, 0.5);
+            border-top: 2px solid #fbbf24;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-outline {
+            border: 2px solid #b45309;
+            color: #a16207;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #fef3c7;
+        }
+
+        .btn-primary {
+            background: #b45309;
+            color: #fef3c7;
+            border-color: #d97706;
+        }
+
+        .btn-primary:hover {
+            background: #92400e;
+        }
+
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+        }
+
+        .icon-lg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"/>
+                        <path d="M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Home
+                </a>
+                <div class="badge">Module 3</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <h1 class="hero-title">Rizal's Life: Family, Childhood, and Early Education</h1>
+                <p class="hero-description">
+                    Exploring the formative years that shaped the character and intellect of the future national hero
+                </p>
+                <div class="decorative-line">
+                    <div class="line"></div>
+                    <div class="diamond"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Tree Section -->
+    <section class="family-tree">
+        <div class="container">
+            <div class="family-tree-content">
+                <div class="family-tree-header">
+                    <div class="decorative-line">
+                        <div class="line"></div>
+                        <div class="diamond"></div>
+                        <div class="line"></div>
+                    </div>
+                    <h2 class="family-tree-title">The Rizal Family Tree</h2>
+                    <p class="family-tree-subtitle">The Mercado-Rizal Family Lineage</p>
+                </div>
+
+                <!-- Family Tree Image Placeholder -->
+                <div class="family-tree-image">
+                    <div class="family-tree-placeholder">
+                    <img src="images/mercadoFAM.jpg">
+                     
+                    </div>
+                    <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;"><br>
+The Rizal family was known for their wealth and prominence in Calamba, Laguna. During their time, they were regarded as one of the largest and most influential families, enjoying a life of ease and affluence. They were considered part of the <strong>principalia</strong> class, the ruling elite of their town. José Rizal was born into a family of thirteen, including his mother Teodora Alonso Realonda and father Don Francisco Mercado II. He had one brother, Paciano, and nine sisters: Saturnina (the eldest), Olympia, Lucia, Narcisa, Maria, Concepcion, Josefa, Soledad (the youngest), and others. The family’s status and resources provided Rizal with opportunities for education and social standing that later shaped his role as a national hero.
+</p>
+                </div>
+
+                <!-- Family Members Details -->
+                <div class="family-members">
+                    <!-- Parents Section -->
+                    <div class="family-section">
+                        <h3>Parents</h3>
+                        
+                        <div class="parent-info">
+                            <div class="parent-name">Francisco Mercado</div>
+                            <div class="parent-details">
+                                <strong>Father</strong><br>
+                                Born: May 11, 1818<br>
+                                Died: January 5, 1898<br>
+                                Occupation: Farmer and businessman<br>
+                                Background: Son of Juan Mercado and Cirila Alejandro
+                            </div>
+                        </div>
+
+                        <div class="parent-info">
+                            <div class="parent-name">Teodora Alonso Realonda</div>
+                            <div class="parent-details">
+                                <strong>Mother</strong><br>
+                                Born: November 8, 1827<br>
+                                Died: August 16, 1911<br>
+                                Background: Daughter of Lorenzo Alonso and Brígidia de Quintos<br>
+                                Education: Well-educated, José's first teacher
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Siblings Section -->
+                    <div class="family-section">
+                        <h3>The Eleven Children</h3>
+                        <div class="siblings-grid">
+                            <div class="sibling-card">
+                                <div class="sibling-name">1. Saturnina Mercado</div>
+                                <div class="sibling-details">Born: 1850<br>Nickname: Neneng<br>Eldest daughter</div>
+                            </div>
+
+                            <div class="sibling-card">
+                                <div class="sibling-name">2. Paciano Mercado</div>
+                                <div class="sibling-details">Born: 1851<br>José's mentor and supporter<br>Revolutionary leader<br><br>- General Paciano Mercado Rizal aka "Lolo Ciano" was the only brother of Jose
+Rizal. He was born in 1851 and studied in Biñan later attending school at the
+Colegio de San Jose in Manila. After the execution of his brother, he joined in the
+Philippine Revolution where he rose up to the ranks of a General. He later married
+Severina Decena of Los Banos and had two children of which one died at an early
+age. Paciano passed away in 1930.
+</div>
+                            </div>
+
+                            <div class="sibling-card">
+                                <div class="sibling-name">3. Narcisa Mercado</div>
+                                <div class="sibling-details">Born: 1852<br>Nickname: Sisa<br>Close to José<br><br> - was the one who found the unmarked
+grave of her brother, Jose in the abandoned Old Paco Cemetery</div>
+                            </div>
+
+                            <div class="sibling-card">
+                                <div class="sibling-name">4. Olimpia Mercado </div>
+                                <div class="sibling-details">Born: 1855<br>Nickname: Ypia<br>Married Silvestre Ubaldo</div>
+                            </div>
+
+                            <div class="sibling-card">
+                                <div class="sibling-name">5. Lucia Mercado </div>
+                                <div class="sibling-details">Born: 1857<br>Married Mariano Herbosa<br>Mother of several children<br><br> - In 1889 Mariano died due to an epidemic but was denied a
+Christian burial. This was due to the fact that he was the brother in law of Jose Rizal.
+This showed the beginning of the persecution of the Rizal family by Spanish friars. </div>
+                            </div>
+
+                            <div class="sibling-card">
+                                <div class="sibling-name">6. Maria Mercado</div>
+                                <div class="sibling-details">Born: 1859<br>Nickname: Biang<br>Married Daniel Faustino Cruz<br><br> -  Maria was a known recipient of many od Jose's letters during his lifetime.
+Maria died in 1945. </div>
+                            </div>
+
+                            <div class="sibling-card jose-highlight">
+                                <div class="sibling-name">7. JOSÉ PROTASIO Mercado</div>
+                                <div class="sibling-details">Born: June 19, 1861<br>The National Hero<br>Seventh of eleven children</div>
+                            </div>
+
+                            <div class="sibling-card">
+                                <div class="sibling-name">8. Concepción Mercado</div>
+                                <div class="sibling-details">Born: 1862<br>Nickname: Concha<br>Died young (age 3) <br><br> - Her death was the first time Jose cried as a young boy. </div>
+                            </div>
+
+                            <div class="sibling-card">
+                                <div class="sibling-name">9. Josefa Mercado</div>
+                                <div class="sibling-details">Born: 1865<br>Nickname: Panggoy<br>Remained unmarried<br><br> - was known for her involvement in the Katipunan, a revolutionary society, and she served as the president of the women's branch of the Katipunan</div>
+                            </div>
+
+                            <div class="sibling-card">
+                                <div class="sibling-name">10. Trinidad Mercado </div>
+                                <div class="sibling-details">Born: 1868<br>Nickname: Trining<br>Remained unmarried<br><br> - Trinidad was the one who received an alcohol lamp from brother Jose,
+in which he secretly hid the "Last Farewell" better known as "Mi Ultimo Adios," a poem
+Rizal wrote on the eve of his death in 1896. Trinidad died in 1951, outliving all her
+siblings. </div>
+                            </div>
+
+                            <div class="sibling-card">
+                                <div class="sibling-name">11. Soledad Mercado</div>
+                                <div class="sibling-details">Born: 1870<br>Nickname: Choleng<br>Youngest daughter</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Family Background -->
+              
+
+                <!-- Birth & Childhood -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9,22 9,12 15,12 15,22"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Birth & Early Childhood</h3>
+                                <p>José's birth in Calamba and his formative early years</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="photo-section">
+                            <div class="photo-placeholder">
+                                    <div class="photo-content">
+                                       <img src="images/A9R1u5e1a1_172hbji_2q4.jpg.jpg" class="image">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="content-section">
+                            
+                             <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">Jose Rizal (Jose Protacio Mercado Rizal y Alonso Realonda) was born on June 19, 1861, in Calamba, Laguna. According to some accounts, his mother nearly died during his delivery due to his unusually large head. Three days after his birth, on June 22, 1861, Rizal was baptized at the Catholic Church of Calamba by parish priest Rev. Rufino Collantes, receiving the name Jose Rizal Mercado. </p>
+                        <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;"> During 1865-1867, his mother taught him how to
+read and write. At the age of three, Rizal mastered and
+learned the alphabet taught by his mother. At a very
+young age, he has shown great interest in reading. He
+enjoyed reading books in their library at home, with his
+mother who acts as his reading teacher and a critic. At this
+time, he also learned how to pray and even read the bible. </p>
+                                        <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;"> When Jose Rizal grew older, his parents acquired
+private tutors to give him lessons at home in preparation
+for his formal education. One of them was Leon Monroy,
+a classmate of his father who taught him the rudiments of
+Latin. At about this time, his mother’s cousin, Uncle Manuel
+Alberto, who frequently visited the family in Calamba, was
+worried about his nephew’s physical development. He
+then taught Rizal to develop the skills in swimming,
+fencing, wrestling and other sports, while Uncle Jose
+taught him to love and admire the beauty of nature.
+On the other hand, Uncle Gregorio, a scholar, has
+instilled in Rizal’s mind the love for education and its importance, the value of hard
+work, to think for himself, and to observe his surroundings carefully</p>
+                                                        <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;"> When he was four years old, his sister Concepcion, the eighth child in the
+Rizal family, died at the age of three. This was the first time he cried as a young boy.
+As sad as he was, the parish priest of Calamba, Father Leoncio Lopez, helped Rizal
+understand the philosophy of life and learned the value of scholarship and
+intellectual honesty.
+Rizal, in his childhood, used to take long rides through all the surrounding
+country by riding his pony that his father gave him. Among his pets were doves and
+a dog.</p>
+                                                                        <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">Owing to the continuous teaching of Doña Teodora, Rizal was persuaded
+to express his feelings through verses. He was able to write his first poem when he
+was eight years old. The poem was entitled “Sa Aking Mga Kababata” (To My Fellow
+Children), which showed that Rizal, even at a young age, already had love for his
+country. Here, he similarly incorporates the love for the native language with God’s
+gift of freedom. He compared his native language or Tagalog to Latin, English and
+Spanish. Tagalog, like any other languages, had its own alphabet and system
+writing, which according to Rizal, disappeared because they were neglected or
+ignored. With this, he encourages his fellow children to love their native tongue.</p>
+                                                                                       
+
+                       
+                       
+                       
+                       
+                       
+                            </div><br>
+
+                            <div class="content-section">
+                           <h3 style="color: #a16207; text-align: justify; margin-bottom: 0.5rem;">Sa Aking mga Kabata</h3>
+                            <div class="content-divider">
+                                <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+
+
+Kapagka ang baya’y sadyang umiibig<br>
+Sa langit salitang kaloob ng langit<br>
+Sanlang kalayaan nasa ring masapi<br><br>
+
+Katulad ng ibong nasa himpapawid<br>
+Pagka’t ang salita’y isang kahatulan<br>
+Sa bayan, sa nayo't mga kaharian<br><br>
+
+At ang isang tao’y katulad, kabagay<br>
+Ng alin mang likha noong kalayaan.<br>
+Ang hindi magmahal sa kanyang salita<br>
+Mahigit sa hayop at malansang isda<br><br>
+
+Kaya ang marapat pagyamanin kusa<br>
+Na tulad sa inang tunay na nagpala<br>
+Ang wikang Tagalog tulad din sa Latin,<br><br>
+
+Sa Ingles, Kastila, at salitang anghel,<br>
+Sapagkat ang Poong maalam tumingin<br>
+Ang siyang naggagawad, nagbibigay sa atin.<br>
+Ang salita nati’y tulad din sa iba<br><br>
+
+Na may alfabeto at sariling letra,<br>
+Na kaya nawala’y dinatnan ng sigwa<br>
+Ang lunday sa lawa noong dakong una.
+</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+               
+
+               
+               
+
+                <!-- Early Education -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-icon-row">
+                            <div class="section-icon">
+                                <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                            </div>
+                            <div class="section-info">
+                                <h3>Early Education & Tutors</h3>
+                                <p>José's first educational experiences and private tutoring</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                    
+                        <div class="content-section">
+                            <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+After Rizal’s tutor Leon Monroy died, his parents decided to transfer Rizal to a private school in Biñan, Laguna. He was accompanied by his older brother Paciano, who acted as his second father during his school days in Biñan. The school was then supervised by Maestro Justiniano Aquino Cruz.<br><br>
+
+Rizal’s first day of class in the school was not easy. The maestro asked him if he knew how to speak Latin or Spanish, but in response, he only knew a little of the languages. As a result, one of his classmates named Pedro, the son of the maestro, laughed at him. Pedro was always bullying him that it eventually resulted in a brawl.<br><br>
+
+But knowing Rizal’s acquired knowledge and skill in the art of wrestling from his Tio Manuel, he defeated Pedro. After the said incident, Rizal became popular in his class. Here, Rizal was able to show his intellectual superiority.
+</p>
+
+                           <p style="color: #a16207; text-align: justify; margin-bottom: 1rem; line-height: 1.6;">
+Here, Rizal was able to show his intellectual superiority. He excelled in his class in Latin, Spanish, and other subjects in the curriculum for elementary pupils. Because of this, many of the students became jealous of him and did everything to destroy Rizal’s name to Maestro Cruz. While Rizal’s interest in painting was nurtured early on by an old painter named Juancho of Biñan. During this time, knowledge was taught in the minds of the students by doing tedious memorization methods. Despite some lack of the elementary education in the Spanish system, Rizal was able to have the needed instruction preparatory for college work in Manila.
+</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="navigation">
+        <div class="container">
+            <div class="nav-content">
+                <a href="19th-century-context.html" class="btn btn-outline">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"/>
+                        <path d="M12 19l-7-7 7-7"/>
+                    </svg>
+                    Previous: 19th Century Context
+                </a>
+                <a href="higher-education.html" class="btn btn-primary">
+                    Next: Higher Education
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"/>
+                        <path d="M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.section-card, .family-tree-image, .family-section, .sibling-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add hover effects to section cards
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Add staggered animation for sibling cards
+        document.querySelectorAll('.sibling-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
